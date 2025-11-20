@@ -43,7 +43,7 @@ const Services = () => {
     {
       title: "BACKGROUND CHECK",
       subtitle: "COLLECTEUR ET VERIFICATEUR DE DONNÉES",
-      image: "https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/h5fxluhb_keyboard-enlarged-by-loupe.psd",
+      image: "https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/3epheodw_Capture%20d%E2%80%99e%CC%81cran%202025-10-01%20a%CC%80%2015.54.14.png",
       content: (
         <>
           <p className="mb-4">
