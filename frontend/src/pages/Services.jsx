@@ -58,7 +58,7 @@ const Services = () => {
     {
       title: "SERVICE D'INVESTIGATION",
       subtitle: "OBJECTIF :",
-      image: "https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/arjt8g0d_SCHEMA.psd",
+      image: "https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/mm8upyvh_2150458977.jpg",
       content: (
         <>
           <div className="mb-6">
