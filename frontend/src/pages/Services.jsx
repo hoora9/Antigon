@@ -79,7 +79,7 @@ const Services = () => {
     {
       title: "AUDIT DES OUTILS NUMÉRIQUES",
       subtitle: "NOUS TRAQUONS LES FAILLES, VOUS GARDEZ LE CONTRÔLE.",
-      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23000000' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23FFFFFF' font-size='24' font-family='Arial'%3EFRAUD IMAGE%3C/text%3E%3C/svg%3E",
+      image: "https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/g5ab26nz_2148546897.jpg",
       content: (
         <>
           <p className="mb-4">
