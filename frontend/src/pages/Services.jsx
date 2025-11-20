@@ -28,7 +28,7 @@ const Services = () => {
     {
       title: "DEFAC (DEEP FAKE CLEANSING)",
       subtitle: "DÉTECTION ET LUTTE CONTRE LES DEEPFAKES",
-      image: "https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/u8yrtqmn_medium-shot-futuristic-romantic-couple.pdf",
+      image: "https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/8lxe1xbr_Capture%20d%E2%80%99e%CC%81cran%202025-09-28%20a%CC%80%2015.00.12.png",
       content: (
         <>
           <p className="font-semibold mb-3">LES DEEPFAKES SONT DE PLUS EN PLUS SOPHISTIQUÉS, ET PEUVENT ÊTRE UTILISÉS POUR :</p>
