@@ -68,7 +68,7 @@ async def send_devis(devis: DevisRequest):
     try:
         # Email configuration
         sender_email = "noreply@antigon.com"  # You can change this
-        receiver_email = "michel.gotlib@gmail.com"
+        receiver_email = "hoora9ahmed@gmail.com"
         
         # Create email content
         subject = f"Nouvelle demande de devis - {devis.nom} {devis.prenom}"
