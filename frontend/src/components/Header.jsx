@@ -12,12 +12,12 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-white/25" style={{ height: '80px' }}>
       <div className="max-w-[1400px] mx-auto px-[7.6923%] h-full flex items-center justify-between">
-        {/* Logo */}
+        {/* Logo - 2X BIGGER */}
         <Link to="/" className="flex items-center">
           <img 
-            src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/tm76cd89_LOGO%20ANTIGON%20BLANC-01.svg" 
+            src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/mu66lgr3_LOGO%20ANTIGON%20BLANC_1-01.svg" 
             alt="ANTIGON" 
-            className="h-10 object-contain cursor-pointer"
+            className="h-20 object-contain cursor-pointer"
           />
         </Link>
 

@@ -122,12 +122,12 @@ code {
   color: var(--text-muted);
 }
 
-/* Button Styles - Sharp Edges */
+/* Button Styles - ROUNDED */
 .btn-primary {
   background: linear-gradient(90deg, rgb(230, 206, 178), rgb(86, 86, 86));
   color: #000000;
   border: none;
-  border-radius: 0px;
+  border-radius: 8px;
   padding: 14px 24px;
   font-size: 18px;
   font-weight: 500;
@@ -156,7 +156,7 @@ code {
   background: rgba(255, 255, 255, 0.1);
   color: #FFFFFF;
   border: none;
-  border-radius: 0px;
+  border-radius: 8px;
   padding: 14px 24px;
   font-size: 18px;
   font-weight: 500;

@@ -17,9 +17,14 @@ const Footer = () => {
             <Link to="/charte" className="text-[#4D4D4D] hover:text-white transition-colors">
               Charte éthique
             </Link>
-            <Link to="/code" className="text-[#4D4D4D] hover:text-white transition-colors">
+            <a 
+              href="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/zjehyrjs_ANTIGON%20Code%20of%20Conduct%20%26%20Ethics%20-%202025%20%28FR%29.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-[#4D4D4D] hover:text-white transition-colors"
+            >
               Code de conduite
-            </Link>
+            </a>
           </div>
           
           {/* Right Side - Copyright */}
