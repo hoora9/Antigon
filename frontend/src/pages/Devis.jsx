@@ -137,8 +137,7 @@ const Devis = () => {
                 onChange={handleChange}
                 required
                 rows="6"
-                className="w-full bg-black border border-white/25 text-white px-4 py-3 focus:outline-none focus:border-[#c9a55a] transition-colors resize-vertical"
-                style={{ borderRadius: '0px' }}
+                className="w-full bg-black border border-white/25 text-white px-4 py-3 focus:outline-none focus:border-[#c9a55a] transition-colors resize-vertical rounded-lg"
               />
             </div>
 
