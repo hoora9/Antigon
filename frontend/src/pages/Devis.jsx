@@ -74,8 +74,7 @@ const Devis = () => {
                   value={formData.nom}
                   onChange={handleChange}
                   required
-                  className="w-full bg-black border border-white/25 text-white px-4 py-3 focus:outline-none focus:border-[#c9a55a] transition-colors"
-                  style={{ borderRadius: '0px' }}
+                  className="w-full bg-black border border-white/25 text-white px-4 py-3 focus:outline-none focus:border-[#c9a55a] transition-colors rounded-lg"
                 />
               </div>
 
@@ -90,8 +89,7 @@ const Devis = () => {
                   value={formData.prenom}
                   onChange={handleChange}
                   required
-                  className="w-full bg-black border border-white/25 text-white px-4 py-3 focus:outline-none focus:border-[#c9a55a] transition-colors"
-                  style={{ borderRadius: '0px' }}
+                  className="w-full bg-black border border-white/25 text-white px-4 py-3 focus:outline-none focus:border-[#c9a55a] transition-colors rounded-lg"
                 />
               </div>
             </div>
@@ -108,8 +106,7 @@ const Devis = () => {
                   value={formData.tel}
                   onChange={handleChange}
                   required
-                  className="w-full bg-black border border-white/25 text-white px-4 py-3 focus:outline-none focus:border-[#c9a55a] transition-colors"
-                  style={{ borderRadius: '0px' }}
+                  className="w-full bg-black border border-white/25 text-white px-4 py-3 focus:outline-none focus:border-[#c9a55a] transition-colors rounded-lg"
                 />
               </div>
 
@@ -124,8 +121,7 @@ const Devis = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full bg-black border border-white/25 text-white px-4 py-3 focus:outline-none focus:border-[#c9a55a] transition-colors"
-                  style={{ borderRadius: '0px' }}
+                  className="w-full bg-black border border-white/25 text-white px-4 py-3 focus:outline-none focus:border-[#c9a55a] transition-colors rounded-lg"
                 />
               </div>
             </div>
