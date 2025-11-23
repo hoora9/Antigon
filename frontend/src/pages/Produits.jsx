@@ -1,6 +1,6 @@
 import React from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
-import { CheckCircle2, Shield, Eye, Lock, TrendingUp } from 'lucide-react';
+import { User, Shield, Eye, Lock, TrendingUp } from 'lucide-react';
 
 const Produits = () => {
   return (
@@ -144,70 +144,106 @@ const Produits = () => {
         </div>
       </section>
 
-      {/* Investigation Timeline Section */}
+      {/* Investigation Numérique Section - REDESIGNED */}
       <section className="py-20 bg-[#070707]">
         <div className="max-w-[1400px] mx-auto px-[7.6923%]">
-          <h2 className="text-4xl font-semibold text-white text-center mb-16">
+          <h2 className="text-5xl font-bold text-white text-center mb-20">
             INVESTIGATION NUMÉRIQUE
           </h2>
 
-          {/* Sources */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-semibold text-white mb-6">Sources:</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-white/85 text-base">
-              <li>• Internet ouvert : sites web, blogs, forums, bases de données publiques.</li>
-              <li>• Réseaux sociaux : Facebook, X/Twitter, LinkedIn, TikTok, etc.</li>
-              <li>• Médias : presse en ligne, télévision, radios.</li>
-              <li>• Images et données satellites : cartographie, photos aériennes.</li>
-              <li>• Sources institutionnelles : registres officiels, rapports publics, publications académiques.</li>
-              <li>• Renseignement publicitaire (ciblage, localisation, etc.)</li>
-            </ul>
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-20">
+            {/* Left Column - Sources */}
+            <div className="lg:col-span-1">
+              <h3 className="text-2xl font-semibold text-white mb-6">Sources:</h3>
+              <ul className="space-y-3 text-white/85 text-base">
+                <li>• Internet ouvert : sites web, blogs, forums, bases de données publiques.</li>
+                <li>• Réseaux sociaux : Facebook, X/Twitter, LinkedIn, TikTok, etc.</li>
+                <li>• Médias : presse en ligne, télévision, radios.</li>
+                <li>• Images et données satellites : cartographie, photos aériennes.</li>
+                <li>• Sources institutionnelles : registres officiels, rapports publics, publications académiques.</li>
+                <li>• Renseignement publicitaire (ciblage, localisation, etc.)</li>
+              </ul>
 
-          {/* Timeline Steps */}
-          <div className="relative">
-            {/* Vertical gradient line */}
-            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#c9a55a] via-[#c9a55a] to-transparent" style={{ transform: 'translateX(-50%)' }} />
+              <div className="mt-12 flex items-center justify-center">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/zolpvcqd_Fleche%20page%201-01.svg" 
+                  alt="Arrow" 
+                  className="w-12 h-12"
+                />
+              </div>
 
-            <div className="space-y-16">
-              {[
-                { number: 1, title: 'VÉRIFIER', description: "l'intégrité de partenaires et fournisseurs.", icon: CheckCircle2 },
-                { number: 2, title: 'SÉCURISER', description: 'les recrutements grâce au criblage.', icon: Shield },
-                { number: 3, title: 'SURVEILLER', description: 'la concurrence et anticiper leurs mouvements.', icon: Eye },
-                { number: 4, title: 'PROTÉGER', description: 'votre réputation en détectant signaux faibles et campagnes hostiles.', icon: Lock },
-                { number: 5, title: 'ANALYSER', description: 'les risques pays avant vos implantations internationales.', icon: TrendingUp }
-              ].map((step, index) => {
-                const Icon = step.icon;
-                return (
-                  <div key={index} className="relative flex flex-col md:flex-row items-start md:items-center gap-8">
-                    {/* Number Circle */}
-                    <div className="relative z-10 flex-shrink-0 w-16 h-16 rounded-full bg-[#c9a55a] flex items-center justify-center text-black text-2xl font-bold mx-0 md:mx-auto">
-                      {step.number}
-                    </div>
+              <div className="mt-8 text-white/85 text-sm leading-relaxed">
+                <p className="font-semibold mb-2">Sélection, recoupement, analyse et exploitation</p>
+                <p>
+                  Les risques sont <span className="text-white font-semibold">maîtrisés</span>, la probité des employés est <span className="text-white font-semibold">objectivée</span>, la concurrence est <span className="text-white font-semibold">modélisée</span>, la e-réputation est <span className="text-white font-semibold">monitorée</span>, l'environnement est <span className="text-white font-semibold">surveillé</span>.
+                </p>
+              </div>
+            </div>
 
-                    {/* Content */}
-                    <div className="flex-1 bg-[#121212] border border-white/25 p-6 rounded-sm">
-                      <div className="flex items-center gap-4 mb-2">
-                        <Icon className="w-6 h-6 text-[#c9a55a]" />
-                        <h4 className="text-2xl font-semibold text-white">{step.title}</h4>
-                      </div>
-                      <p className="text-white/85 text-lg">{step.description}</p>
-                    </div>
-                  </div>
-                );
-              })}
+            {/* Right Column - 5 Steps with Icons */}
+            <div className="lg:col-span-2 space-y-8">
+              {/* Step 1 */}
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#c9a55a] flex items-center justify-center">
+                  <User className="w-8 h-8 text-black" />
+                </div>
+                <div>
+                  <h4 className="text-2xl font-bold text-white mb-2">VÉRIFIER</h4>
+                  <p className="text-white/85 text-lg">l'intégrité de partenaires et fournisseurs.</p>
+                </div>
+              </div>
+
+              {/* Step 2 */}
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#c9a55a] flex items-center justify-center">
+                  <Shield className="w-8 h-8 text-black" />
+                </div>
+                <div>
+                  <h4 className="text-2xl font-bold text-white mb-2">SÉCURISER</h4>
+                  <p className="text-white/85 text-lg">les recrutements grâce au criblage.</p>
+                </div>
+              </div>
+
+              {/* Step 3 */}
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#c9a55a] flex items-center justify-center">
+                  <Eye className="w-8 h-8 text-black" />
+                </div>
+                <div>
+                  <h4 className="text-2xl font-bold text-white mb-2">SURVEILLER</h4>
+                  <p className="text-white/85 text-lg">la concurrence et anticiper leurs mouvements.</p>
+                </div>
+              </div>
+
+              {/* Step 4 */}
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#c9a55a] flex items-center justify-center">
+                  <Lock className="w-8 h-8 text-black" />
+                </div>
+                <div>
+                  <h4 className="text-2xl font-bold text-white mb-2">PROTÉGER</h4>
+                  <p className="text-white/85 text-lg">votre réputation en détectant signaux faibles et campagnes hostiles.</p>
+                </div>
+              </div>
+
+              {/* Step 5 */}
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#c9a55a] flex items-center justify-center">
+                  <TrendingUp className="w-8 h-8 text-black" />
+                </div>
+                <div>
+                  <h4 className="text-2xl font-bold text-white mb-2">ANALYSER</h4>
+                  <p className="text-white/85 text-lg">les risques pays avant vos implantations internationales.</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Process Description */}
-          <div className="mt-16 text-center">
-            <p className="text-xl font-semibold text-white mb-4">Sélection, recoupement, analyse et exploitation</p>
-            <p className="text-lg text-white/85 mb-8">
-              Les risques sont maîtrisés, la probité des employés est objectivée, la concurrence est modélisée, la e-réputation est monitorée, l'environnement est surveillé.
-            </p>
-            <div className="inline-block bg-[#c9a55a] text-black px-8 py-4 font-bold text-lg">
+          {/* Summary Box */}
+          <div className="mt-16 border-2 border-white p-8 text-center">
+            <p className="text-white text-xl font-bold">
               EN RÉSUMÉ : L'OSINT TRANSFORME L'INFORMATION PUBLIQUE EN AVANTAGE STRATÉGIQUE POUR VOTRE ENTREPRISE.
-            </div>
+            </p>
           </div>
         </div>
       </section>
