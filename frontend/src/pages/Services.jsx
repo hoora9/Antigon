@@ -1,22 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ServiceCard = ({ title, subtitle, content, image, buttonText = "Je me protège !" }) => {
+const ServiceCard = ({ title, subtitle, content, image, reversed = false }) => {
   return (
-    <div className="bg-[#121212] border border-white/25 rounded-sm overflow-hidden">
-      {image && (
-        <div className="w-full h-64 overflow-hidden">
-          <img src={image} alt={title} className="w-full h-full object-cover" />
+    <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${reversed ? 'lg:flex-row-reverse' : ''}`}>
+      {/* Image on Left (or Right if reversed) */}
+      <div className={`${reversed ? 'lg:order-2' : 'lg:order-1'}`}>
+        <div className="w-full aspect-square max-w-md mx-auto">
+          <img 
+            src={image} 
+            alt={title} 
+            className="w-full h-full object-cover rounded-[32px]"
+          />
         </div>
-      )}
-      <div className="p-8">
-        <h3 className="text-3xl font-semibold text-white mb-2">{title}</h3>
-        {subtitle && <p className="text-xl text-[#c9a55a] mb-6">{subtitle}</p>}
+      </div>
+
+      {/* Text Content on Right (or Left if reversed) */}
+      <div className={`${reversed ? 'lg:order-1' : 'lg:order-2'}`}>
+        <h3 className="text-3xl font-bold text-white mb-3">{title}</h3>
+        {subtitle && <p className="text-xl text-[#c9a55a] font-semibold mb-6">{subtitle}</p>}
+        
         <div className="space-y-4 text-white/85 text-base leading-relaxed mb-8">
           {content}
         </div>
+
         <Link to="/devis" className="btn-primary">
-          {buttonText}
+          Je me protège !
         </Link>
       </div>
     </div>
@@ -28,50 +37,95 @@ const Services = () => {
     {
       title: "DEFAC (DEEP FAKE CLEANSING)",
       subtitle: "DÉTECTION ET LUTTE CONTRE LES DEEPFAKES",
-      image: "https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/8lxe1xbr_Capture%20d%E2%80%99e%CC%81cran%202025-09-28%20a%CC%80%2015.00.12.png",
+      image: "https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/cyps0yhu_medium-shot-futuristic-romantic-couple.png",
       content: (
         <>
-          <p className="font-semibold mb-3">LES DEEPFAKES SONT DE PLUS EN PLUS SOPHISTIQUÉS, ET PEUVENT ÊTRE UTILISÉS POUR :</p>
-          <p className="mb-4">
-            Propagande politique, diffamation de personnalités publiques, diffusion de fausses informations, harcèlement ou vengeance numérique, escroqueries ou fraudes financières, des stratégies de détection multi-supports (image, vidéo, audio, texte).
-          </p>
-          <p className="font-semibold mb-2">ANTIGON lutte contre cette menace via :</p>
-          <p>L'expérience en fraude documentaire et des outils puissants pour détecter les artefacts visuels et audio.</p>
+          <div className="mb-4">
+            <p className="font-semibold mb-3 text-white">LES DEEPFAKES SONT DE PLUS EN PLUS SOPHISTIQUÉS, ET PEUVENT ÊTRE UTILISÉS POUR :</p>
+            <ul className="space-y-2">
+              <li className="flex items-start gap-3">
+                <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/ciowlz3l_clarte%20uniconlabs-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+                <span>Propagande politique, diffamation de personnalités publiques</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/ciowlz3l_clarte%20uniconlabs-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+                <span>Diffusion de fausses informations, harcèlement ou vengeance numérique</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/ciowlz3l_clarte%20uniconlabs-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+                <span>Escroqueries ou fraudes financières</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p className="font-semibold mb-2 text-white">ANTIGON lutte contre cette menace via :</p>
+            <p>L'expérience en fraude documentaire et des outils puissants pour détecter les artefacts visuels et audio.</p>
+          </div>
         </>
       )
     },
     {
       title: "BACKGROUND CHECK",
       subtitle: "COLLECTEUR ET VERIFICATEUR DE DONNÉES",
-      image: "https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/3epheodw_Capture%20d%E2%80%99e%CC%81cran%202025-10-01%20a%CC%80%2015.54.14.png",
+      image: "https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/crzrcy8x_Screenshot%202025-11-23%20at%2017.13.00.png",
       content: (
         <>
-          <p className="mb-4">
-            Les background checks, ou vérifications d'antécédents, sont des processus d'enquête visant à collecter et vérifier des informations relatives à une personne. Ils permettent de s'assurer de la véracité des données fournies, telles que les diplômes, les expériences professionnelles, les références, ou encore l'existence éventuelle d'antécédents judiciaires.
-          </p>
-          <p>
-            La pratique des background checks selon ANTIGON s'inscrit dans un cadre légal strict, notamment en respectant le Règlement Général sur la Protection des Données (RGPD).
-          </p>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-3">
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/dschb17w_gestion-de-la-reputation%20%28uniconlabs%29-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <span>Les background checks, ou vérifications d'antécédents, sont des processus d'enquête visant à collecter et vérifier des informations relatives à une personne.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/dschb17w_gestion-de-la-reputation%20%28uniconlabs%29-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <span>Ils permettent de s'assurer de la véracité des données fournies, telles que les diplômes, les expériences professionnelles, les références, ou encore l'existence éventuelle d'antécédents judiciaires.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/dschb17w_gestion-de-la-reputation%20%28uniconlabs%29-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <span>La pratique des background checks selon ANTIGON s'inscrit dans un cadre légal strict, notamment en respectant le Règlement Général sur la Protection des Données (RGPD).</span>
+            </li>
+          </ul>
         </>
       )
     },
     {
       title: "SERVICE D'INVESTIGATION",
       subtitle: "OBJECTIF :",
-      image: "https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/mm8upyvh_2150458977.jpg",
+      image: "https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/0p7cbahx_Screenshot%202025-11-23%20at%2017.14.58.png",
       content: (
         <>
           <div className="mb-6">
-            <p className="mb-3">Se mettre en conformité réglementaire et se prémunir contre les principaux risques de fraude, de réputation ou de corruption pouvant entrainer de lourdes sanctions judiciaires et des pertes financières.</p>
-            <p>Décrypter l'environnement stratégique et concurrentiel, appréhender les réseaux d'influence et circuits de décision.</p>
+            <ul className="space-y-2">
+              <li className="flex items-start gap-3">
+                <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/4u1fdecb_contact%28smashicons%29-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+                <span>Se mettre en conformité réglementaire et se prémunir contre les principaux risques de fraude, de réputation ou de corruption pouvant entrainer de lourdes sanctions judiciaires et des pertes financières.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/4u1fdecb_contact%28smashicons%29-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+                <span>Décrypter l'environnement stratégique et concurrentiel, appréhender les réseaux d'influence et circuits de décision.</span>
+              </li>
+            </ul>
           </div>
-          <ul className="list-disc list-inside space-y-2">
-            <li>Service opérationnel d'aide à la décision à destination des services Sûreté et Compliance</li>
-            <li>Identifier les menaces</li>
-            <li>Vérifier l'honorabilité et la probité de relations d'affaires</li>
-            <li>Maîtriser les risques à l'international</li>
-            <li>Préservation de preuves numériques</li>
-            <li>Appréhender les réseaux d'influence et circuits de décision</li>
+          <ul className="space-y-2">
+            <li className="flex items-start gap-3">
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/ciowlz3l_clarte%20uniconlabs-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <span>Service opérationnel d'aide à la décision à destination des services Sûreté et Compliance</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/ciowlz3l_clarte%20uniconlabs-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <span>Identifier les menaces</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/ciowlz3l_clarte%20uniconlabs-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <span>Vérifier l'honorabilité et la probité de relations d'affaires</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/ciowlz3l_clarte%20uniconlabs-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <span>Maîtriser les risques à l'international</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/ciowlz3l_clarte%20uniconlabs-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <span>Préservation de preuves numériques</span>
+            </li>
           </ul>
         </>
       )
@@ -79,45 +133,46 @@ const Services = () => {
     {
       title: "AUDIT DES OUTILS NUMÉRIQUES",
       subtitle: "NOUS TRAQUONS LES FAILLES, VOUS GARDEZ LE CONTRÔLE.",
-      image: "https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/g5ab26nz_2148546897.jpg",
+      image: "https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/nmhzi4dr_2148546897.jpg",
       content: (
         <>
-          <p className="mb-4">
-            Les appareils numériques – ordinateurs, téléphones, tablettes – sont devenus des outils indispensables, mais aussi des points d'entrée privilégiés pour des menaces invisibles.
-          </p>
-          <p className="mb-4">
-            Nous réalisons des audits complets de vos équipements afin de garantir qu'ils sont fiables, protégés et exempts de logiciels malveillants ou espions.
-          </p>
-          <p className="mb-6">
-            Chaque audit est accompagné d'un rapport clair et détaillé, indiquant le niveau de sûreté de vos appareils et proposant d'éventuelles mesures correctives concrètes.
-          </p>
-          <ul className="list-disc list-inside space-y-2">
-            <li>Contrôle de l'intégrité des appareils : inspection des systèmes pour détecter toute anomalie ou comportement suspect.</li>
-            <li>Détection de logiciels espions et intrusifs : identification de programmes indésirables pouvant compromettre vos données ou vos communications.</li>
-            <li>Évaluation des paramètres de sécurité : vérification des configurations, accès, mises à jour et protections installées.</li>
-            <li>Recommandations pratiques : mise en place de bonnes pratiques et solutions adaptées pour fiabiliser vos terminaux et limiter les risques futurs.</li>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-3">
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/dschb17w_gestion-de-la-reputation%20%28uniconlabs%29-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <span>Les appareils numériques – ordinateurs, téléphones, tablettes – sont devenus des outils indispensables, mais aussi des points d'entrée privilégiés pour des menaces invisibles.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/dschb17w_gestion-de-la-reputation%20%28uniconlabs%29-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <span>Nous réalisons des audits complets de vos équipements afin de garantir qu'ils sont fiables, protégés et exempts de logiciels malveillants ou espions.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/dschb17w_gestion-de-la-reputation%20%28uniconlabs%29-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <span>Chaque audit est accompagné d'un rapport clair et détaillé, indiquant le niveau de sûreté de vos appareils et proposant d'éventuelles mesures correctives concrètes.</span>
+            </li>
           </ul>
         </>
       )
     },
     {
-      title: "PROTECTION DIGITALE OPÉRATIONNELLE – ADINT (ADVERTISING INTELLIGENCE)",
-      subtitle: "",
-      image: "https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/dqkrfv3w_location-symbol-with-landscape-background.jpg",
+      title: "PROTECTION DIGITALE OPÉRATIONNELLE – ADINT",
+      subtitle: "ADVERTISING INTELLIGENCE",
+      image: "https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/rabcx72n_location-symbol-with-landscape-background.jpg",
       content: (
         <>
-          <p className="mb-4">
-            Les appareils numériques – ordinateurs, téléphones, tablettes – sont devenus des outils indispensables, mais aussi des points d'entrée privilégiés pour des menaces invisibles. Nous réalisons des audits complets de vos équipements afin de garantir qu'ils sont fiables, protégés et exempts de logiciels malveillants ou espions.
-          </p>
-          <p className="mb-4">
-            Cette technique permet de détecter une présence, d'anticiper une menace et de participer à la protection d'un lieu ou de tiers partout dans le monde entier ; il peut également s'agir de mener des investigations offensives par exemple mais également de lutter contre l'espionnage, les fuites d'information, la concurrence déloyale, etc. Cela permet également de vérifier des liens entre plusieurs « devices » par des recherches croisées « géofencées ».
-          </p>
-          <p className="mb-4">
-            Dans le cadre de la protection d'un lieu il suffit de tracer sur une carte présente dans la plate-forme un « géofencing » du lieu et de rechercher sur des plages de dates l'ensemble des « devices » présents dans cet environnement. La recherche prend seulement quelques minutes. En utilisant les filtres jour/nuit, les recherches sont affinées pour limiter le nombre de « devices » détectés notamment dans un environnement urbain. La présence régulière d'un « device » à des heures « non ouvrées » n'est pas à ce stade un sujet de malveillance mais s'y intéresser permettra de classer le « device-cible » dans un groupe à analyser.
-          </p>
-          <p>
-            La recherche permet de remonter les informations concernant l'identité du « device », le nombre de jours sur la zone, l'heure de présence, la marque du « device » (Apple/android) et la précision de localisation.
-          </p>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-3">
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/4u1fdecb_contact%28smashicons%29-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <span>Cette technique permet de détecter une présence, d'anticiper une menace et de participer à la protection d'un lieu ou de tiers partout dans le monde entier.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/4u1fdecb_contact%28smashicons%29-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <span>Il peut également s'agir de mener des investigations offensives par exemple mais également de lutter contre l'espionnage, les fuites d'information, la concurrence déloyale, etc.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/4u1fdecb_contact%28smashicons%29-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <span>Cela permet également de vérifier des liens entre plusieurs « devices » par des recherches croisées « géofencées ».</span>
+            </li>
+          </ul>
         </>
       )
     }
@@ -127,11 +182,11 @@ const Services = () => {
     <div className="min-h-screen bg-black pt-[80px]">
       <section className="py-20">
         <div className="max-w-[1400px] mx-auto px-[7.6923%]">
-          <h1 className="text-5xl font-semibold text-white text-center mb-16">Services</h1>
+          <h1 className="text-5xl font-bold text-white text-center mb-20">Services</h1>
           
-          <div className="grid grid-cols-1 gap-12">
+          <div className="space-y-32">
             {services.map((service, index) => (
-              <ServiceCard key={index} {...service} />
+              <ServiceCard key={index} {...service} reversed={index % 2 === 1} />
             ))}
           </div>
         </div>
