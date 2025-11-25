@@ -44,10 +44,16 @@ const Services = () => {
             LES DEEPFAKES SONT DE PLUS EN PLUS SOPHISTIQUÉS,<br />
             ET PEUVENT ÊTRE UTILISÉS POUR :
           </p>
-          <p className="mb-6">
-            Propagande politique, diffamation de personnalités publiques, diffusion de fausses informations, harcèlement ou vengeance numérique, escroqueries ou fraudes financières, des stratégies de détection multi-supports (image, vidéo, audio, texte).
-          </p>
-          <p className="font-semibold mb-2 text-white">ANTIGON lutte contre cette menace via :</p>
+          <div className="flex items-start gap-3 mb-6">
+            <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/jnwrqce2_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+            <p>
+              Propagande politique, diffamation de personnalités publiques, diffusion de fausses informations, harcèlement ou vengeance numérique, escroqueries ou fraudes financières, des stratégies de détection multi-supports (image, vidéo, audio, texte).
+            </p>
+          </div>
+          <div className="flex items-start gap-3 mb-2">
+            <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/jnwrqce2_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+            <p className="font-semibold text-white">ANTIGON lutte contre cette menace via :</p>
+          </div>
           <p>
             L'expérience en fraude documentaire et des outils puissants pour détecter les artefacts visuels et audio.
           </p>
