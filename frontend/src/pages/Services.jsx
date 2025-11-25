@@ -136,31 +136,22 @@ const Services = () => {
       image: "https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/nmhzi4dr_2148546897.jpg",
       content: (
         <>
-          <p className="mb-4">
-            Les appareils numériques – ordinateurs, téléphones, tablettes – sont devenus des outils indispensables, mais aussi des points d'entrée privilégiés pour des menaces invisibles.
-          </p>
+          <div className="flex items-start gap-3 mb-4">
+            <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/jnwrqce2_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+            <p>
+              Les appareils numériques – ordinateurs, téléphones, tablettes – sont devenus des outils indispensables, mais aussi des points d'entrée privilégiés pour des menaces invisibles.
+            </p>
+          </div>
           <p className="mb-6">
             Nous réalisons des audits complets de vos équipements afin de garantir qu'ils sont fiables, protégés et exempts de logiciels malveillants ou espions.
           </p>
           
-          <ul className="space-y-3 mb-6">
-            <li className="flex items-start gap-3">
-              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/avpd5xnl_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
-              <span><strong>Contrôle de l'intégrité des appareils :</strong> inspection des systèmes pour détecter toute anomalie ou comportement suspect.</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/avpd5xnl_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
-              <span><strong>Détection de logiciels espions et intrusifs :</strong> identification de programmes indésirables pouvant compromettre vos données ou vos communications.</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/avpd5xnl_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
-              <span><strong>Évaluation des paramètres de sécurité :</strong> vérification des configurations, accès, mises à jour et protections installées.</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/avpd5xnl_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
-              <span><strong>Recommandations pratiques :</strong> mise en place de bonnes pratiques et solutions adaptées pour fiabiliser vos terminaux et limiter les risques futurs.</span>
-            </li>
-          </ul>
+          <div className="space-y-3 mb-6">
+            <div className="flex items-start gap-3">
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/jnwrqce2_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <span><strong>Contrôle de l'intégrité des appareils :</strong> inspection des systèmes pour détecter toute anomalie ou comportement suspect. <strong>Détection de logiciels espions et intrusifs :</strong> identification de programmes indésirables pouvant compromettre vos données ou vos communications. <strong>Évaluation des paramètres de sécurité :</strong> vérification des configurations, accès, mises à jour et protections installées. <strong>Recommandations pratiques :</strong> mise en place de bonnes pratiques et solutions adaptées pour fiabiliser vos terminaux et limiter les risques futurs.</span>
+            </div>
+          </div>
           
           <p>
             Chaque audit est accompagné d'un rapport clair et détaillé, indiquant le niveau de sûreté de vos appareils et proposant d'éventuelles mesures correctives concrètes.
