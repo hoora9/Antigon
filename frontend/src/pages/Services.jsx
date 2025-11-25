@@ -88,12 +88,18 @@ const Services = () => {
       content: (
         <>
           <div className="mb-6">
-            <p className="mb-4">
-              Se mettre en conformité réglementaire et se prémunir contre les principaux risques de fraude, de réputation ou de corruption pouvant entraîner de lourdes sanctions judiciaires et des pertes financières.
-            </p>
-            <p className="mb-6">
-              Décrypter l'environnement stratégique et concurrentiel, appréhender les réseaux d'influence et circuits de décision.
-            </p>
+            <div className="flex items-start gap-3 mb-4">
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/jnwrqce2_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <p>
+                Se mettre en conformité réglementaire et se prémunir contre les principaux risques de fraude, de réputation ou de corruption pouvant entraîner de lourdes sanctions judiciaires et des pertes financières.
+              </p>
+            </div>
+            <div className="flex items-start gap-3 mb-6">
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/jnwrqce2_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <p>
+                Décrypter l'environnement stratégique et concurrentiel, appréhender les réseaux d'influence et circuits de décision.
+              </p>
+            </div>
           </div>
           <ul className="space-y-2">
             <li className="flex items-start gap-3">
