@@ -165,15 +165,24 @@ const Services = () => {
       image: "https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/ss5vipnk_2150458977.jpg",
       content: (
         <>
-          <p className="mb-4">
-            Les appareils numériques – ordinateurs, téléphones, tablettes – sont devenus des outils indispensables, mais aussi des points d'entrée privilégiés pour des menaces invisibles. Nous réalisons des audits complets de vos équipements afin de garantir qu'ils sont fiables, protégés et exempts de logiciels malveillants ou espions.
-          </p>
-          <p className="mb-6">
-            Cette technique permet de détecter une présence, d'anticiper une menace et de participer à la protection d'un lieu ou de tiers partout dans le monde entier ; il peut également s'agir de mener des investigations offensives par exemple mais également de lutter contre l'espionnage, les fuites d'information, la concurrence déloyale, etc. Cela permet également de vérifier des liens entre plusieurs « devices » par des recherches croisées « géofencées ».
-          </p>
-          <p className="mb-4">
-            Dans le cadre de la protection d'un lieu il suffit de tracer sur une carte présente dans la plateforme un « géofencing » du lieu et de rechercher sur des plages de dates l'ensemble des « devices » présents dans cet environnement. La recherche prend seulement quelques minutes. En utilisant les filtres jour/nuit, les recherches sont affinées pour limiter le nombre de « devices » détectés notamment dans un environnement urbain. La présence régulière d'un « device » à des heures « non ouvrées » n'est pas à ce stade un sujet de malveillance mais s'y intéresser permettre de classer le « device-cible » dans un groupe à analyser.
-          </p>
+          <div className="flex items-start gap-3 mb-4">
+            <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/jnwrqce2_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+            <p>
+              Les appareils numériques – ordinateurs, téléphones, tablettes – sont devenus des outils indispensables, mais aussi des points d'entrée privilégiés pour des menaces invisibles. Nous réalisons des audits complets de vos équipements afin de garantir qu'ils sont fiables, protégés et exempts de logiciels malveillants ou espions.
+            </p>
+          </div>
+          <div className="flex items-start gap-3 mb-6">
+            <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/jnwrqce2_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+            <p>
+              Cette technique permet de détecter une présence, d'anticiper une menace et de participer à la protection d'un lieu ou de tiers partout dans le monde entier ; il peut également s'agir de mener des investigations offensives par exemple mais également de lutter contre l'espionnage, les fuites d'information, la concurrence déloyale, etc. Cela permet également de vérifier des liens entre plusieurs « devices » par des recherches croisées « géofencées ».
+            </p>
+          </div>
+          <div className="flex items-start gap-3 mb-4">
+            <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/jnwrqce2_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+            <p>
+              Dans le cadre de la protection d'un lieu il suffit de tracer sur une carte présente dans la plateforme un « géofencing » du lieu et de rechercher sur des plages de dates l'ensemble des « devices » présents dans cet environnement. La recherche prend seulement quelques minutes. En utilisant les filtres jour/nuit, les recherches sont affinées pour limiter le nombre de « devices » détectés notamment dans un environnement urbain. La présence régulière d'un « device » à des heures « non ouvrées » n'est pas à ce stade un sujet de malveillance mais s'y intéresser permettre de classer le « device-cible » dans un groupe à analyser.
+            </p>
+          </div>
           <p>
             La recherche permet de remonter les informations concernant l'identité du « device », le nombre de jours sur la zone, l'heure de présence, la marque du « device » (Apple/android) et la précision de localisation.
           </p>
