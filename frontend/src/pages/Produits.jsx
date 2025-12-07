@@ -281,8 +281,8 @@ const Produits = () => {
 
           {/* Summary Box */}
           <div className="border-2 border-white p-8 text-center">
-            <p className="text-white text-xl font-bold">
-              EN RÉSUMÉ : L'OSINT TRANSFORME L'INFORMATION PUBLIQUE EN AVANTAGE STRATÉGIQUE POUR VOTRE ENTREPRISE.
+            <p className="text-[#c9a55a] text-xl font-bold">
+              {t(translations.products.investigation.summary)}
             </p>
           </div>
         </div>
