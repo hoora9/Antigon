@@ -143,71 +143,143 @@ const Produits = () => {
         </div>
       </section>
 
-      {/* Investigation Numérique Section - REPLACED with screenshot content */}
+      {/* Investigation Numérique Section */}
       <section className="py-20 bg-[#070707]">
         <div className="max-w-[1400px] mx-auto px-[7.6923%]">
           <h2 className="text-5xl font-bold text-white text-center mb-16">
             INVESTIGATION NUMÉRIQUE
           </h2>
 
-          {/* Sources List */}
-          <div className="mb-12">
-            <ul className="space-y-3 text-white/85 text-lg leading-relaxed">
-              <li>• Internet ouvert : sites web, blogs, forums, bases de données publiques.</li>
-              <li>• Réseaux sociaux : Facebook, X/Twitter, LinkedIn, TikTok, etc.</li>
-              <li>• Médias : presse en ligne, télévision, radios.</li>
-              <li>• Images et données satellites : cartographie, photos aériennes.</li>
-              <li>• Sources institutionnelles : registres officiels, rapports publics, publications académiques.</li>
-              <li>• Renseignement publicitaire (ciblage, localisation, etc.)</li>
-            </ul>
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-12">
+            {/* Left Column: Sources */}
+            <div className="lg:col-span-5">
+              <ul className="space-y-3 text-white/85 text-base leading-relaxed">
+                <li>• Internet ouvert : sites web, blogs, forums, bases de données publiques.</li>
+                <li>• Réseaux sociaux : Facebook, X/Twitter, LinkedIn, TikTok, etc.</li>
+                <li>• Médias : presse en ligne, télévision, radios.</li>
+                <li>• Images et données satellites : cartographie, photos aériennes.</li>
+                <li>• Sources institutionnelles : registres officiels, rapports publics, publications académiques.</li>
+                <li>• Renseignement publicitaire (ciblage, localisation, etc.)</li>
+              </ul>
+              
+              {/* Arrow Down */}
+              <div className="flex justify-center my-8">
+                <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                  <path d="M7.41 12.59L12 17.17l4.59-4.58L18 14l-6 6-6-6 1.41-1.41z"/>
+                </svg>
+              </div>
+              
+              <p className="text-center text-white font-semibold text-lg mb-4">
+                Sélection, recoupement, analyse et exploitation
+              </p>
+              
+              {/* Arrow Down */}
+              <div className="flex justify-center mb-8">
+                <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                  <path d="M7.41 12.59L12 17.17l4.59-4.58L18 14l-6 6-6-6 1.41-1.41z"/>
+                </svg>
+              </div>
+              
+              <p className="text-white/85 text-sm leading-relaxed">
+                • Les risques sont <span className="text-white font-bold">maîtrisés</span>, la probité des employés est <span className="text-white font-bold">objectivée</span>, la concurrence est <span className="text-white font-bold">modélisée</span>, la e-réputation est <span className="text-white font-bold">monitorée</span>, l'environnement est <span className="text-white font-bold">surveillé</span>.
+              </p>
+            </div>
 
-          {/* Process Description */}
-          <div className="mb-12">
-            <p className="text-xl font-semibold text-white mb-4 text-center">Sélection, recoupement, analyse et exploitation</p>
-            <p className="text-lg text-white/85 leading-relaxed text-center">
-              • Les risques sont <span className="text-white font-semibold">maîtrisés</span>, la probité des employés est <span className="text-white font-semibold">objectivée</span>, la concurrence est <span className="text-white font-semibold">modélisée</span>, la e-réputation est <span className="text-white font-semibold">monitorée</span>, l'environnement est <span className="text-white font-semibold">surveillé</span>.
-            </p>
+            {/* Middle Column: Vertical Timeline */}
+            <div className="lg:col-span-2 flex justify-center">
+              <div className="relative">
+                {/* Vertical Line */}
+                <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-white/30 transform -translate-x-1/2"></div>
+                
+                {/* Numbered Circles */}
+                <div className="relative space-y-32">
+                  {[1, 2, 3, 4, 5].map((num) => (
+                    <div key={num} className="flex justify-center">
+                      <div className="relative z-10 w-16 h-16 rounded-full border-2 border-white bg-black flex items-center justify-center">
+                        <span className="text-white text-2xl font-bold">{num}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: 5 Steps with Icons */}
+            <div className="lg:col-span-5 space-y-24">
+              {/* Step 1 */}
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12">
+                  <svg className="w-full h-full text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold text-white mb-1">VÉRIFIER</h4>
+                  <p className="text-white/85 text-base">l'intégrité de partenaires et fournisseurs.</p>
+                </div>
+              </div>
+
+              {/* Step 2 */}
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12">
+                  <svg className="w-full h-full text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold text-white mb-1">SÉCURISER</h4>
+                  <p className="text-white/85 text-base">les recrutements grâce au criblage.</p>
+                </div>
+              </div>
+
+              {/* Step 3 */}
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12">
+                  <svg className="w-full h-full text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold text-white mb-1">SURVEILLER</h4>
+                  <p className="text-white/85 text-base">la concurrence et anticiper leurs mouvements.</p>
+                </div>
+              </div>
+
+              {/* Step 4 */}
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12">
+                  <svg className="w-full h-full text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold text-white mb-1">PROTÉGER</h4>
+                  <p className="text-white/85 text-base">votre réputation en détectant signaux faibles et campagnes hostiles.</p>
+                </div>
+              </div>
+
+              {/* Step 5 */}
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12">
+                  <svg className="w-full h-full text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold text-white mb-1">ANALYSER</h4>
+                  <p className="text-white/85 text-base">les risques pays avant vos implantations internationales.</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Summary Box */}
-          <div className="mb-16 border-2 border-white p-8 text-center">
+          <div className="border-2 border-white p-8 text-center">
             <p className="text-white text-xl font-bold">
               EN RÉSUMÉ : L'OSINT TRANSFORME L'INFORMATION PUBLIQUE EN AVANTAGE STRATÉGIQUE POUR VOTRE ENTREPRISE.
             </p>
-          </div>
-
-          {/* 5 Steps */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#c9a55a] mb-3">1.</div>
-              <h4 className="text-xl font-bold text-white mb-2">VÉRIFIER</h4>
-              <p className="text-white/85">l'intégrité de partenaires et fournisseurs.</p>
-            </div>
-
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#c9a55a] mb-3">2.</div>
-              <h4 className="text-xl font-bold text-white mb-2">SÉCURISER</h4>
-              <p className="text-white/85">les recrutements grâce au criblage.</p>
-            </div>
-
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#c9a55a] mb-3">3.</div>
-              <h4 className="text-xl font-bold text-white mb-2">SURVEILLER</h4>
-              <p className="text-white/85">la concurrence et anticiper leurs mouvements.</p>
-            </div>
-
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#c9a55a] mb-3">4.</div>
-              <h4 className="text-xl font-bold text-white mb-2">PROTÉGER</h4>
-              <p className="text-white/85">votre réputation en détectant signaux faibles et campagnes hostiles.</p>
-            </div>
-
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#c9a55a] mb-3">5.</div>
-              <h4 className="text-xl font-bold text-white mb-2">ANALYSER</h4>
-              <p className="text-white/85">les risques pays avant vos implantations internationales.</p>
-            </div>
           </div>
         </div>
       </section>
