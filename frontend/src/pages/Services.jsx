@@ -103,27 +103,27 @@ const Services = () => {
           </div>
           <ul className="space-y-2">
             <li className="flex items-start gap-3">
-              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/avpd5xnl_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/avpd5xnl_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-10 h-10 flex-shrink-0 mt-0.5" />
               <span>Service opérationnel d'aide à la décision à destination des services Sûreté et Compliance</span>
             </li>
             <li className="flex items-start gap-3">
-              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/avpd5xnl_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/avpd5xnl_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-10 h-10 flex-shrink-0 mt-0.5" />
               <span>Identifier les menaces</span>
             </li>
             <li className="flex items-start gap-3">
-              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/avpd5xnl_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/avpd5xnl_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-10 h-10 flex-shrink-0 mt-0.5" />
               <span>Vérifier l'honorabilité et la probité de relations d'affaires</span>
             </li>
             <li className="flex items-start gap-3">
-              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/avpd5xnl_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/avpd5xnl_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-10 h-10 flex-shrink-0 mt-0.5" />
               <span>Maîtriser les risques à l'international</span>
             </li>
             <li className="flex items-start gap-3">
-              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/avpd5xnl_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/avpd5xnl_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-10 h-10 flex-shrink-0 mt-0.5" />
               <span>Préservation de preuves numériques</span>
             </li>
             <li className="flex items-start gap-3">
-              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/avpd5xnl_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-6 h-6 flex-shrink-0 mt-0.5" />
+              <img src="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/avpd5xnl_pointille%CC%81s%20Antigon%20multicolor-01.svg" alt="icon" className="w-10 h-10 flex-shrink-0 mt-0.5" />
               <span>Appréhender les réseaux d'influence et circuits de décision</span>
             </li>
           </ul>
