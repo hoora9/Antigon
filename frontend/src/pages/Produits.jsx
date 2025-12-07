@@ -216,7 +216,7 @@ const Produits = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-white mb-1">VÉRIFIER</h4>
+                  <h4 className="text-lg font-bold text-[#c9a55a] mb-1">VÉRIFIER</h4>
                   <p className="text-white/85 text-lg">l'intégrité de partenaires et fournisseurs.</p>
                 </div>
               </div>
@@ -229,7 +229,7 @@ const Produits = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-white mb-1">SÉCURISER</h4>
+                  <h4 className="text-lg font-bold text-[#c9a55a] mb-1">SÉCURISER</h4>
                   <p className="text-white/85 text-lg">les recrutements grâce au criblage.</p>
                 </div>
               </div>
@@ -242,7 +242,7 @@ const Produits = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-white mb-1">SURVEILLER</h4>
+                  <h4 className="text-lg font-bold text-[#c9a55a] mb-1">SURVEILLER</h4>
                   <p className="text-white/85 text-lg">la concurrence et anticiper leurs mouvements.</p>
                 </div>
               </div>
@@ -255,7 +255,7 @@ const Produits = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-white mb-1">PROTÉGER</h4>
+                  <h4 className="text-lg font-bold text-[#c9a55a] mb-1">PROTÉGER</h4>
                   <p className="text-white/85 text-lg">votre réputation en détectant signaux faibles et campagnes hostiles.</p>
                 </div>
               </div>
@@ -268,7 +268,7 @@ const Produits = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-white mb-1">ANALYSER</h4>
+                  <h4 className="text-lg font-bold text-[#c9a55a] mb-1">ANALYSER</h4>
                   <p className="text-white/85 text-lg">les risques pays avant vos implantations internationales.</p>
                 </div>
               </div>
