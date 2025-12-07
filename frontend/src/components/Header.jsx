@@ -7,6 +7,7 @@ import LanguageToggle from './LanguageToggle';
 const Header = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const isActive = (path) => {
     return location.pathname === path || location.hash === path;
