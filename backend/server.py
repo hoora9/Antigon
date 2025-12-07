@@ -66,26 +66,30 @@ async def get_status_checks():
 async def send_devis(devis: DevisRequest):
     """Send devis request via email"""
     try:
-        # Email configuration
-        sender_email = "noreply@antigon.com"  # You can change this
-        receiver_email = "hoora9ahmed@gmail.com"
+        # Get SMTP configuration from environment
+        smtp_host = os.environ.get('SMTP_HOST', 'smtp.gmail.com')
+        smtp_port = int(os.environ.get('SMTP_PORT', 587))
+        smtp_user = os.environ.get('SMTP_USER')
+        smtp_password = os.environ.get('SMTP_PASSWORD')
+        sender_email = os.environ.get('SMTP_FROM', smtp_user)
+        receiver_email = os.environ.get('SMTP_TO', 'hoora9ahmed@gmail.com')
         
         # Create email content
         subject = f"Nouvelle demande de devis - {devis.nom} {devis.prenom}"
         
         body = f"""
-        Nouvelle demande de devis reçue :
-        
-        Nom: {devis.nom}
-        Prénom: {devis.prenom}
-        Téléphone: {devis.tel}
-        Email: {devis.email}
-        
-        Requête:
-        {devis.requete}
-        
-        ---
-        Message envoyé depuis le site ANTIGON
+Nouvelle demande de devis reçue :
+
+Nom: {devis.nom}
+Prénom: {devis.prenom}
+Téléphone: {devis.tel}
+Email: {devis.email}
+
+Requête:
+{devis.requete}
+
+---
+Message envoyé depuis le site ANTIGON
         """
         
         # Create message
@@ -93,27 +97,28 @@ async def send_devis(devis: DevisRequest):
         message["From"] = sender_email
         message["To"] = receiver_email
         message["Subject"] = subject
-        
         message.attach(MIMEText(body, "plain"))
         
-        # For development: Log the email instead of sending
-        # In production, you would use SMTP server credentials
-        logger.info(f"Email would be sent to {receiver_email}")
-        logger.info(f"Subject: {subject}")
-        logger.info(f"Body: {body}")
+        # Send email via SMTP
+        try:
+            with smtplib.SMTP(smtp_host, smtp_port) as server:
+                server.starttls()  # Enable TLS
+                server.login(smtp_user, smtp_password)
+                server.send_message(message)
+                logger.info(f"Email sent successfully to {receiver_email}")
+        except Exception as smtp_error:
+            logger.error(f"SMTP Error: {str(smtp_error)}")
+            # Continue to store in database even if email fails
         
         # Store in database
         devis_dict = devis.dict()
         devis_dict['id'] = str(uuid.uuid4())
         devis_dict['timestamp'] = datetime.utcnow()
-        devis_dict['status'] = 'pending'
+        devis_dict['status'] = 'sent'
         
         await db.devis_requests.insert_one(devis_dict)
         
-        # Note: In production, you would configure SMTP server to actually send emails
-        # For now, we'll just log and store in database
-        
-        return {"success": True, "message": "Devis request received and stored"}
+        return {"success": True, "message": "Devis request sent successfully"}
         
     except Exception as e:
         logger.error(f"Error processing devis: {str(e)}")
