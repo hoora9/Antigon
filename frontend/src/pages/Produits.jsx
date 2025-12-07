@@ -4,7 +4,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations/translations';
 
 const Produits = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   
   return (
     <div className="min-h-screen bg-black pt-[80px]">
@@ -27,54 +27,52 @@ const Produits = () => {
               <Accordion type="single" collapsible className="w-full space-y-4">
                 <AccordionItem value="item-1" className="border border-white/25 bg-[#121212] rounded-sm">
                   <AccordionTrigger className="px-6 py-4 text-white text-lg font-semibold hover:no-underline">
-                    Qu'est ce que l'OSINT ?
+                    {t(translations.products.faq.q1)}
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/85 text-base leading-relaxed">
                     <p className="mb-4">
-                      Derrière les lettres OSINT se cache une immense masse de données qui ont un point commun essentiel : elles sont toutes accessibles publiquement et leur acquisition est légale et non intrusive. On parle ici d'informations accessibles et non classifiées.
+                      {t(translations.products.faq.a1_1)}
                     </p>
                     <p className="mb-4">
-                      L'OSINT, très précisément, c'est l'Open Source Intelligence ou en français l'acronyme ROSO (Renseignement d'Origine Sources Ouvertes). Il désigne la capacité d'acquérir et d'analyser des données publiques pour en tirer des prévisions ou une meilleure compréhension d'un phénomène ou d'une situation.
+                      {t(translations.products.faq.a1_2)}
                     </p>
                     <p>
-                      Il ne s'agit pas seulement de "googler" une requête, mais d'exploiter méthodiquement des sources ouvertes (sites web, réseaux sociaux, bases de données, forums, documents publics, fuites, etc.) pour produire un renseignement actionnable.
+                      {t(translations.products.faq.a1_3)}
                     </p>
                   </AccordionContent>
                 </AccordionItem>
 
                 <AccordionItem value="item-2" className="border border-white/25 bg-[#121212] rounded-sm">
                   <AccordionTrigger className="px-6 py-4 text-white text-lg font-semibold hover:no-underline">
-                    A quoi sert l'OSINT ?
+                    {t(translations.products.faq.q2)}
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/85 text-base leading-relaxed">
                     <p className="mb-4">
-                      Il est relativement aisé de comprendre l'intérêt stratégique que peut représenter l'analyse des données publiques dans le domaine cyber. Mais l'OSINT trouve des applications bien au-delà de la seule question des attaques informatiques.
+                      {t(translations.products.faq.a2_1)}
                     </p>
                     <p>
-                      L'OSINT est mise à profit pour la lutte contre le terrorisme, les cybermenaces, les pratiques financières frauduleuses, l'usurpation, la désinformation et toutes formes d'activités illégales. Il s'agit donc d'une cellule d'activité aussi précieuse pour les États que pour les entreprises.
+                      {t(translations.products.faq.a2_2)}
                     </p>
                   </AccordionContent>
                 </AccordionItem>
 
                 <AccordionItem value="item-3" className="border border-white/25 bg-[#121212] rounded-sm">
                   <AccordionTrigger className="px-6 py-4 text-white text-lg font-semibold hover:no-underline">
-                    Quelles informations recouvrent l'OSINT?
+                    {t(translations.products.faq.q3)}
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/85 text-base leading-relaxed">
                     <p className="mb-4">
-                      La mise en place et le développement de l'OSINT est en lien direct avec le contexte international actuel : c'est bien parce que nous vivons à l'ère de l'information, de la sur-numérisation et du tout digital que l'OSINT trouve matière à exister. Ce sont les milliers d'échanges qui ont lieu entre des milliards d'individus au jour le jour sur Internet qui fait apparaître, dans la sphère numérique, une multitude de données accessibles publiquement.
+                      {t(translations.products.faq.a3_1)}
                     </p>
                     <p className="mb-4">
-                      Cet océan de données représente une source de renseignements inouïe. Outre le travail d'analyse et de recherche en soi, le terme d'OSINT désigne aussi directement ce volume d'informations colossal.
+                      {t(translations.products.faq.a3_2)}
                     </p>
                     <div className="mt-6">
-                      <p className="font-semibold mb-3">L'OSINT est un outil stratégique pour :</p>
+                      <p className="font-semibold mb-3">{t(translations.products.faq.a3_3_title)}</p>
                       <ul className="list-disc list-inside space-y-2">
-                        <li>La cybersécurité (recherche d'identifiants compromis, shadow IT, cartographie d'infrastructure),</li>
-                        <li>La sûreté (profilage de menaces, veille réputationnelle, cartographie humaine),</li>
-                        <li>L'intelligence économique (veille concurrentielle, due diligence),</li>
-                        <li>Les forces de l'ordre (lutte contre le terrorisme, la fraude, les trafics),</li>
-                        <li>Les entreprises sensibles (détection de signaux faibles, risques pays, fuites internes).</li>
+                        {t(translations.products.faq.a3_3_list).map((item, index) => (
+                          <li key={index}>{item}</li>
+                        ))}
                       </ul>
                     </div>
                   </AccordionContent>
@@ -82,41 +80,39 @@ const Produits = () => {
 
                 <AccordionItem value="item-4" className="border border-white/25 bg-[#121212] rounded-sm">
                   <AccordionTrigger className="px-6 py-4 text-white text-lg font-semibold hover:no-underline">
-                    Quels sont les types d'OSINT?
+                    {t(translations.products.faq.q4)}
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/85 text-base leading-relaxed">
                     <div className="overflow-x-auto mb-6">
                       <table className="w-full border-collapse">
                         <thead>
                           <tr className="border-b border-white/25">
-                            <th className="text-left py-3 px-4 font-semibold">TYPE</th>
-                            <th className="text-left py-3 px-4 font-semibold">DESCRIPTION</th>
-                            <th className="text-left py-3 px-4 font-semibold">RISQUES</th>
+                            <th className="text-left py-3 px-4 font-semibold">{t(translations.products.faq.a4_table_headers)[0]}</th>
+                            <th className="text-left py-3 px-4 font-semibold">{t(translations.products.faq.a4_table_headers)[1]}</th>
+                            <th className="text-left py-3 px-4 font-semibold">{t(translations.products.faq.a4_table_headers)[2]}</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr className="border-b border-white/25">
-                            <td className="py-3 px-4">OSINT Passif</td>
-                            <td className="py-3 px-4">Collecte de données publiquement accessibles sans interaction avec la cible</td>
-                            <td className="py-3 px-4">Discrétion maximale, mais risque de données obsolètes</td>
+                            <td className="py-3 px-4">{t(translations.products.faq.a4_table_passive.type)}</td>
+                            <td className="py-3 px-4">{t(translations.products.faq.a4_table_passive.desc)}</td>
+                            <td className="py-3 px-4">{t(translations.products.faq.a4_table_passive.risks)}</td>
                           </tr>
                           <tr>
-                            <td className="py-3 px-4">OSINT Actif</td>
-                            <td className="py-3 px-4">Utilisation d'outils de scan ou d'interaction directe (par exemple via un crawler ou une requête DNS)</td>
-                            <td className="py-3 px-4">Moins discret, risque de détection par la cible</td>
+                            <td className="py-3 px-4">{t(translations.products.faq.a4_table_active.type)}</td>
+                            <td className="py-3 px-4">{t(translations.products.faq.a4_table_active.desc)}</td>
+                            <td className="py-3 px-4">{t(translations.products.faq.a4_table_active.risks)}</td>
                           </tr>
                         </tbody>
                       </table>
                     </div>
 
                     <div className="mt-6">
-                      <p className="font-semibold mb-3">Quelles sont les sources OSINT les plus courantes ?</p>
+                      <p className="font-semibold mb-3">{t(translations.products.faq.a4_sources_title)}</p>
                       <ul className="list-disc list-inside space-y-2">
-                        <li>Web ouvert (sites institutionnels, presse, données légales)</li>
-                        <li>Réseaux sociaux (LinkedIn, X/Twitter, Telegram, TikTok)</li>
-                        <li>Données techniques (Shodan, Censys, PublicWWW, GitHub)</li>
-                        <li>Bases de leaks (HaveIBeenPwned, Bayonet, Pastebin, forums)</li>
-                        <li>Données gouvernementales (marchés publics, brevets, registres légaux)</li>
+                        {t(translations.products.faq.a4_sources_list).map((item, index) => (
+                          <li key={index}>{item}</li>
+                        ))}
                       </ul>
                     </div>
                   </AccordionContent>
@@ -124,19 +120,18 @@ const Produits = () => {
 
                 <AccordionItem value="item-5" className="border border-white/25 bg-[#121212] rounded-sm">
                   <AccordionTrigger className="px-6 py-4 text-white text-lg font-semibold hover:no-underline">
-                    En quoi la plateforme ANTIGON est-elle différente des autres ?
+                    {t(translations.products.faq.q5)}
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/85 text-base leading-relaxed">
                     <p className="mb-4">
-                      ANTIGON n'est pas seulement une plateforme OSINT, Il s'agit d'une plateforme holistique de WEBINT qui cumule GEOINT (imagerie satellite), ADINT (Advertising Intel), SOCMINT (Social Media Intel) & FININT (Financial Intel) dans une solution modulaire et enrichie par de l'IA.
+                      {t(translations.products.faq.a5_1)}
                     </p>
                     <div className="mt-6">
-                      <p className="font-semibold mb-3">ANTIGON – une couverture complète de l'empreinte numérique :</p>
+                      <p className="font-semibold mb-3">{t(translations.products.faq.a5_2_title)}</p>
                       <ul className="list-disc list-inside space-y-2">
-                        <li>Extraction automatisée de la «signature digitale» d'un individu ou groupe.</li>
-                        <li>Recherche par : nom, pseudo, téléphone, email, adresse IP, portefeuille crypto, réseaux sociaux, etc.</li>
-                        <li>Cartographie relationnelle & chronologie automatisées.</li>
-                        <li>Sémantisation, catégorisation, OCR (Reconnaissance Faciale Intégrée).</li>
+                        {t(translations.products.faq.a5_2_list).map((item, index) => (
+                          <li key={index}>{item}</li>
+                        ))}
                       </ul>
                     </div>
                   </AccordionContent>
