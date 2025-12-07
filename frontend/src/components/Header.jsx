@@ -33,7 +33,7 @@ const Header = () => {
               isActive('/#apropos') ? 'text-[#6FD2C0]' : 'text-[#4D4D4D] hover:text-white'
             }`}
           >
-            A Propos
+            {t(translations.nav.about)}
           </Link>
           <Link 
             to="/produits" 
@@ -41,7 +41,7 @@ const Header = () => {
               isActive('/produits') ? 'text-[#6FD2C0]' : 'text-[#4D4D4D] hover:text-white'
             }`}
           >
-            Produits
+            {t(translations.nav.products)}
           </Link>
           <Link 
             to="/services" 
@@ -49,7 +49,7 @@ const Header = () => {
               isActive('/services') ? 'text-[#6FD2C0]' : 'text-[#4D4D4D] hover:text-white'
             }`}
           >
-            Services
+            {t(translations.nav.services)}
           </Link>
           <Link 
             to="/contact" 
@@ -57,7 +57,7 @@ const Header = () => {
               isActive('/contact') ? 'text-[#6FD2C0]' : 'text-[#4D4D4D] hover:text-white'
             }`}
           >
-            Contact
+            {t(translations.nav.contact)}
           </Link>
           <Link 
             to="/publications" 
@@ -65,13 +65,14 @@ const Header = () => {
               isActive('/publications') ? 'text-[#6FD2C0]' : 'text-[#4D4D4D] hover:text-white'
             }`}
           >
-            Publications
+            {t(translations.nav.publications)}
           </Link>
+          <LanguageToggle />
           <Link 
             to="/devis" 
             className="btn-primary"
           >
-            Demander un Devis
+            {t(translations.nav.getQuote)}
           </Link>
         </nav>
 
