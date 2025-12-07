@@ -1,6 +1,8 @@
 import React from 'react';
 import Spline from '@splinetool/react-spline';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations/translations';
 
 const Home = () => {
   return (
