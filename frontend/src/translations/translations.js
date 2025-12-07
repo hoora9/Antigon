@@ -57,8 +57,104 @@ export const translations = {
         en: 'OSINT is used for combating terrorism, cyber threats, fraudulent financial practices, impersonation, disinformation, and all forms of illegal activities. It is therefore an activity unit as valuable for states as for businesses.'
       },
       q3: { fr: 'Quelles informations recouvrent l\'OSINT?', en: 'What information does OSINT cover?' },
+      a3_1: {
+        fr: 'La mise en place et le développement de l\'OSINT est en lien direct avec le contexte international actuel : c\'est bien parce que nous vivons à l\'ère de l\'information, de la sur-numérisation et du tout digital que l\'OSINT trouve matière à exister. Ce sont les milliers d\'échanges qui ont lieu entre des milliards d\'individus au jour le jour sur Internet qui fait apparaître, dans la sphère numérique, une multitude de données accessibles publiquement.',
+        en: 'The establishment and development of OSINT is directly linked to the current international context: it is precisely because we live in the information age, of over-digitization and all-digital that OSINT finds its raison d\'être. It is the thousands of exchanges that take place between billions of individuals day by day on the Internet that reveals, in the digital sphere, a multitude of publicly accessible data.'
+      },
+      a3_2: {
+        fr: 'Cet océan de données représente une source de renseignements inouïe. Outre le travail d\'analyse et de recherche en soi, le terme d\'OSINT désigne aussi directement ce volume d\'informations colossal.',
+        en: 'This ocean of data represents an unprecedented source of intelligence. Beyond the analysis and research work itself, the term OSINT also directly refers to this colossal volume of information.'
+      },
+      a3_3_title: {
+        fr: 'L\'OSINT est un outil stratégique pour :',
+        en: 'OSINT is a strategic tool for:'
+      },
+      a3_3_list: {
+        fr: [
+          'La cybersécurité (recherche d\'identifiants compromis, shadow IT, cartographie d\'infrastructure),',
+          'La sûreté (profilage de menaces, veille réputationnelle, cartographie humaine),',
+          'L\'intelligence économique (veille concurrentielle, due diligence),',
+          'Les forces de l\'ordre (lutte contre le terrorisme, la fraude, les trafics),',
+          'Les entreprises sensibles (détection de signaux faibles, risques pays, fuites internes).'
+        ],
+        en: [
+          'Cybersecurity (search for compromised credentials, shadow IT, infrastructure mapping),',
+          'Security (threat profiling, reputation monitoring, human mapping),',
+          'Business intelligence (competitive intelligence, due diligence),',
+          'Law enforcement (fight against terrorism, fraud, trafficking),',
+          'Sensitive companies (detection of weak signals, country risks, internal leaks).'
+        ]
+      },
       q4: { fr: 'Quels sont les types d\'OSINT?', en: 'What are the types of OSINT?' },
-      q5: { fr: 'En quoi la plateforme ANTIGON est-elle différente des autres ?', en: 'How is the ANTIGON platform different from others?' }
+      a4_table_headers: {
+        fr: ['TYPE', 'DESCRIPTION', 'RISQUES'],
+        en: ['TYPE', 'DESCRIPTION', 'RISKS']
+      },
+      a4_table_passive: {
+        type: { fr: 'OSINT Passif', en: 'Passive OSINT' },
+        desc: { 
+          fr: 'Collecte de données publiquement accessibles sans interaction avec la cible',
+          en: 'Collection of publicly accessible data without interaction with the target'
+        },
+        risks: {
+          fr: 'Discrétion maximale, mais risque de données obsolètes',
+          en: 'Maximum discretion, but risk of obsolete data'
+        }
+      },
+      a4_table_active: {
+        type: { fr: 'OSINT Actif', en: 'Active OSINT' },
+        desc: {
+          fr: 'Utilisation d\'outils de scan ou d\'interaction directe (par exemple via un crawler ou une requête DNS)',
+          en: 'Use of scanning tools or direct interaction (for example via a crawler or DNS query)'
+        },
+        risks: {
+          fr: 'Moins discret, risque de détection par la cible',
+          en: 'Less discreet, risk of detection by the target'
+        }
+      },
+      a4_sources_title: {
+        fr: 'Quelles sont les sources OSINT les plus courantes ?',
+        en: 'What are the most common OSINT sources?'
+      },
+      a4_sources_list: {
+        fr: [
+          'Web ouvert (sites institutionnels, presse, données légales)',
+          'Réseaux sociaux (LinkedIn, X/Twitter, Telegram, TikTok)',
+          'Données techniques (Shodan, Censys, PublicWWW, GitHub)',
+          'Bases de leaks (HaveIBeenPwned, Bayonet, Pastebin, forums)',
+          'Données gouvernementales (marchés publics, brevets, registres légaux)'
+        ],
+        en: [
+          'Open web (institutional sites, press, legal data)',
+          'Social networks (LinkedIn, X/Twitter, Telegram, TikTok)',
+          'Technical data (Shodan, Censys, PublicWWW, GitHub)',
+          'Leak databases (HaveIBeenPwned, Bayonet, Pastebin, forums)',
+          'Government data (public contracts, patents, legal registers)'
+        ]
+      },
+      q5: { fr: 'En quoi la plateforme ANTIGON est-elle différente des autres ?', en: 'How is the ANTIGON platform different from others?' },
+      a5_1: {
+        fr: 'ANTIGON n\'est pas seulement une plateforme OSINT, Il s\'agit d\'une plateforme holistique de WEBINT qui cumule GEOINT (imagerie satellite), ADINT (Advertising Intel), SOCMINT (Social Media Intel) & FININT (Financial Intel) dans une solution modulaire et enrichie par de l\'IA.',
+        en: 'ANTIGON is not just an OSINT platform. It is a holistic WEBINT platform that combines GEOINT (satellite imagery), ADINT (Advertising Intel), SOCMINT (Social Media Intel) & FININT (Financial Intel) in a modular solution enhanced by AI.'
+      },
+      a5_2_title: {
+        fr: 'ANTIGON – une couverture complète de l\'empreinte numérique :',
+        en: 'ANTIGON – comprehensive coverage of the digital footprint:'
+      },
+      a5_2_list: {
+        fr: [
+          'Extraction automatisée de la «signature digitale» d\'un individu ou groupe.',
+          'Recherche par : nom, pseudo, téléphone, email, adresse IP, portefeuille crypto, réseaux sociaux, etc.',
+          'Cartographie relationnelle & chronologie automatisées.',
+          'Sémantisation, catégorisation, OCR (Reconnaissance Faciale Intégrée).'
+        ],
+        en: [
+          'Automated extraction of the "digital signature" of an individual or group.',
+          'Search by: name, username, phone, email, IP address, crypto wallet, social networks, etc.',
+          'Automated relational mapping & timeline.',
+          'Semantization, categorization, OCR (Integrated Facial Recognition).'
+        ]
+      }
     },
     investigation: {
       title: { fr: 'INVESTIGATION NUMÉRIQUE', en: 'DIGITAL INVESTIGATION' },
