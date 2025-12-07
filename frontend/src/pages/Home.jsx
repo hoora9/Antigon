@@ -5,6 +5,8 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations/translations';
 
 const Home = () => {
+  const { t } = useLanguage();
+  
   return (
     <div className="min-h-screen bg-black pt-[80px]">
       {/* Hero Section with Spline 3D */}
@@ -30,12 +32,11 @@ const Home = () => {
                 className="text-6xl lg:text-7xl font-semibold leading-tight" 
                 style={{ letterSpacing: '2px' }}
               >
-                Exposer l'invisible,<br />
-                sécuriser l'essentiel.
+                {t(translations.home.hero.tagline)}
               </h1>
               
               <Link to="/produits" className="btn-primary inline-flex items-center gap-3">
-                <span>EN SAVOIR PLUS</span>
+                <span>{t(translations.home.hero.cta)}</span>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
