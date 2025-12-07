@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations/translations';
+import LanguageToggle from './LanguageToggle';
 
 const Header = () => {
   const location = useLocation();
