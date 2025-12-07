@@ -27,53 +27,43 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          <Link 
-            to="/#apropos" 
-            className={`text-lg font-normal transition-colors ${
-              isActive('/#apropos') ? 'text-[#6FD2C0]' : 'text-[#4D4D4D] hover:text-white'
-            }`}
+          <a 
+            href="#home" 
+            className="text-lg font-normal text-[#4D4D4D] hover:text-white transition-colors"
           >
             {t(translations.nav.about)}
-          </Link>
-          <Link 
-            to="/produits" 
-            className={`text-lg font-normal transition-colors ${
-              isActive('/produits') ? 'text-[#6FD2C0]' : 'text-[#4D4D4D] hover:text-white'
-            }`}
+          </a>
+          <a 
+            href="#produits" 
+            className="text-lg font-normal text-[#4D4D4D] hover:text-white transition-colors"
           >
             {t(translations.nav.products)}
-          </Link>
-          <Link 
-            to="/services" 
-            className={`text-lg font-normal transition-colors ${
-              isActive('/services') ? 'text-[#6FD2C0]' : 'text-[#4D4D4D] hover:text-white'
-            }`}
+          </a>
+          <a 
+            href="#services" 
+            className="text-lg font-normal text-[#4D4D4D] hover:text-white transition-colors"
           >
             {t(translations.nav.services)}
-          </Link>
-          <Link 
-            to="/contact" 
-            className={`text-lg font-normal transition-colors ${
-              isActive('/contact') ? 'text-[#6FD2C0]' : 'text-[#4D4D4D] hover:text-white'
-            }`}
+          </a>
+          <a 
+            href="#contact" 
+            className="text-lg font-normal text-[#4D4D4D] hover:text-white transition-colors"
           >
             {t(translations.nav.contact)}
-          </Link>
-          <Link 
-            to="/publications" 
-            className={`text-lg font-normal transition-colors ${
-              isActive('/publications') ? 'text-[#6FD2C0]' : 'text-[#4D4D4D] hover:text-white'
-            }`}
+          </a>
+          <a 
+            href="#publications" 
+            className="text-lg font-normal text-[#4D4D4D] hover:text-white transition-colors"
           >
             {t(translations.nav.publications)}
-          </Link>
+          </a>
           <LanguageToggle />
-          <Link 
-            to="/devis" 
+          <a 
+            href="#devis" 
             className="btn-primary"
           >
             {t(translations.nav.getQuote)}
-          </Link>
+          </a>
         </nav>
 
         {/* Mobile Menu Button */}
