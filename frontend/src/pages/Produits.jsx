@@ -187,10 +187,16 @@ const Produits = () => {
               </div>
               
               <p className="text-white/85 text-lg leading-relaxed">
-                {t({ 
-                  fr: '• Les risques sont maîtrisés, la probité des employés est objectivée, la concurrence est modélisée, la e-réputation est monitorée, l\'environnement est surveillé.',
-                  en: '• Risks are controlled, employee integrity is objectified, competition is modeled, e-reputation is monitored, the environment is surveilled.'
-                }).split('maîtrisés').join('<strong>maîtrisés</strong>').split('objectivée').join('<strong>objectivée</strong>').split('modélisée').join('<strong>modélisée</strong>').split('monitorée').join('<strong>monitorée</strong>').split('surveillé').join('<strong>surveillé</strong>').split('controlled').join('<strong>controlled</strong>').split('objectified').join('<strong>objectified</strong>').split('modeled').join('<strong>modeled</strong>').split('monitored').join('<strong>monitored</strong>').split('surveilled').join('<strong>surveilled</strong>')}
+                • {t({ fr: 'Les risques sont ', en: 'Risks are ' })}
+                <span className="text-white font-bold">{t({ fr: 'maîtrisés', en: 'controlled' })}</span>
+                {t({ fr: ', la probité des employés est ', en: ', employee integrity is ' })}
+                <span className="text-white font-bold">{t({ fr: 'objectivée', en: 'objectified' })}</span>
+                {t({ fr: ', la concurrence est ', en: ', competition is ' })}
+                <span className="text-white font-bold">{t({ fr: 'modélisée', en: 'modeled' })}</span>
+                {t({ fr: ', la e-réputation est ', en: ', e-reputation is ' })}
+                <span className="text-white font-bold">{t({ fr: 'monitorée', en: 'monitored' })}</span>
+                {t({ fr: ', l\'environnement est ', en: ', the environment is ' })}
+                <span className="text-white font-bold">{t({ fr: 'surveillé', en: 'surveilled' })}</span>.
               </p>
             </div>
 
