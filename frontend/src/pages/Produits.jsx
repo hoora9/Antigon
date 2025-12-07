@@ -4,6 +4,8 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations/translations';
 
 const Produits = () => {
+  const { t } = useLanguage();
+  
   return (
     <div className="min-h-screen bg-black pt-[80px]">
       {/* Two Column Layout */}
