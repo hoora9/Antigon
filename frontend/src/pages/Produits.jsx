@@ -195,14 +195,14 @@ const Produits = () => {
             <div className="lg:col-span-2 flex justify-center">
               <div className="relative">
                 {/* Vertical Line */}
-                <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-white/30 transform -translate-x-1/2"></div>
+                <div className="absolute left-1/2 top-6 bottom-6 w-0.5 bg-white/30 transform -translate-x-1/2"></div>
                 
-                {/* Numbered Circles */}
-                <div className="relative space-y-32">
+                {/* Numbered Circles - aligned with step titles */}
+                <div className="relative space-y-[5.5rem]">
                   {[1, 2, 3, 4, 5].map((num) => (
                     <div key={num} className="flex justify-center">
-                      <div className="relative z-10 w-16 h-16 rounded-full border-2 border-white bg-black flex items-center justify-center">
-                        <span className="text-white text-2xl font-bold">{num}</span>
+                      <div className="relative z-10 w-12 h-12 rounded-full border-2 border-white bg-black flex items-center justify-center">
+                        <span className="text-white text-xl font-bold">{num}</span>
                       </div>
                     </div>
                   ))}
