@@ -151,7 +151,7 @@ const Produits = () => {
       <section className="py-20 bg-[#070707]">
         <div className="max-w-[1400px] mx-auto px-[7.6923%]">
           <h2 className="text-5xl font-bold text-white text-center mb-16">
-            INVESTIGATION NUMÉRIQUE
+            {t(translations.products.investigation.title)}
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-12">
