@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations/translations';
 
@@ -11,15 +12,15 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Left Side - Links */}
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 md:gap-6 text-sm">
-            <a href="#legal" className="text-[#4D4D4D] hover:text-white transition-colors">
+            <Link to="/mentions-legales" className="text-[#4D4D4D] hover:text-white transition-colors">
               {t(translations.footer.legal)}
-            </a>
-            <a href="#privacy" className="text-[#4D4D4D] hover:text-white transition-colors">
+            </Link>
+            <Link to="/politique" className="text-[#4D4D4D] hover:text-white transition-colors">
               {t(translations.footer.privacy)}
-            </a>
-            <a href="#charter" className="text-[#4D4D4D] hover:text-white transition-colors">
+            </Link>
+            <Link to="/charte" className="text-[#4D4D4D] hover:text-white transition-colors">
               {t(translations.footer.charter)}
-            </a>
+            </Link>
             <a 
               href="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/zjehyrjs_ANTIGON%20Code%20of%20Conduct%20%26%20Ethics%20-%202025%20%28FR%29.pdf" 
               target="_blank" 
