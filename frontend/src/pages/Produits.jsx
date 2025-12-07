@@ -153,7 +153,7 @@ const Produits = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-12">
             {/* Left Column: Sources */}
             <div className="lg:col-span-5">
-              <ul className="space-y-3 text-white/85 text-base leading-relaxed">
+              <ul className="space-y-3 text-white/85 text-lg leading-relaxed">
                 <li>• Internet ouvert : sites web, blogs, forums, bases de données publiques.</li>
                 <li>• Réseaux sociaux : Facebook, X/Twitter, LinkedIn, TikTok, etc.</li>
                 <li>• Médias : presse en ligne, télévision, radios.</li>
@@ -182,7 +182,7 @@ const Produits = () => {
                 </svg>
               </div>
               
-              <p className="text-white/85 text-sm leading-relaxed">
+              <p className="text-white/85 text-lg leading-relaxed">
                 • Les risques sont <span className="text-white font-bold">maîtrisés</span>, la probité des employés est <span className="text-white font-bold">objectivée</span>, la concurrence est <span className="text-white font-bold">modélisée</span>, la e-réputation est <span className="text-white font-bold">monitorée</span>, l'environnement est <span className="text-white font-bold">surveillé</span>.
               </p>
             </div>
