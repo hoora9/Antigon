@@ -180,23 +180,105 @@ export const translations = {
     protect: { fr: 'Je me protège !', en: 'Protect Myself!' },
     defac: {
       title: { fr: 'DEFAC (DEEP FAKE CLEANSING)', en: 'DEFAC (DEEP FAKE CLEANSING)' },
-      subtitle: { fr: 'DÉTECTION ET LUTTE CONTRE LES DEEPFAKES', en: 'DETECTION AND FIGHT AGAINST DEEPFAKES' }
+      subtitle: { fr: 'DÉTECTION ET LUTTE CONTRE LES DEEPFAKES', en: 'DETECTION AND FIGHT AGAINST DEEPFAKES' },
+      warning: {
+        fr: 'LES DEEPFAKES SONT DE PLUS EN PLUS SOPHISTIQUÉS,\nET PEUVENT ÊTRE UTILISÉS POUR :',
+        en: 'DEEPFAKES ARE INCREASINGLY SOPHISTICATED,\nAND CAN BE USED FOR:'
+      },
+      content1: {
+        fr: 'Propagande politique, diffamation de personnalités publiques, diffusion de fausses informations, harcèlement ou vengeance numérique, escroqueries ou fraudes financières, des stratégies de détection multi-supports (image, vidéo, audio, texte).',
+        en: 'Political propaganda, defamation of public figures, spread of false information, digital harassment or revenge, scams or financial fraud, multi-platform detection strategies (image, video, audio, text).'
+      },
+      fight: {
+        fr: 'ANTIGON lutte contre cette menace via :',
+        en: 'ANTIGON fights this threat through:'
+      },
+      content2: {
+        fr: 'L\'expérience en fraude documentaire et des outils puissants pour détecter les artefacts visuels et audio.',
+        en: 'Experience in document fraud and powerful tools to detect visual and audio artifacts.'
+      }
     },
     backgroundCheck: {
       title: { fr: 'BACKGROUND CHECK', en: 'BACKGROUND CHECK' },
-      subtitle: { fr: 'COLLECTEUR ET VERIFICATEUR DE DONNÉES', en: 'DATA COLLECTOR AND VERIFIER' }
+      subtitle: { fr: 'COLLECTEUR ET VERIFICATEUR DE DONNÉES', en: 'DATA COLLECTOR AND VERIFIER' },
+      content1: {
+        fr: 'Les background checks, ou vérifications d\'antécédents, sont des processus d\'enquête visant à collecter et vérifier des informations relatives à une personne. Ils permettent de s\'assurer de la véracité des données fournies, telles que les diplômes, les expériences professionnelles, les références, ou encore l\'existence éventuelle d\'antécédents judiciaires.',
+        en: 'Background checks are investigation processes aimed at collecting and verifying information about a person. They ensure the accuracy of provided data, such as diplomas, professional experience, references, or the possible existence of criminal records.'
+      },
+      content2: {
+        fr: 'La pratique des background checks selon ANTIGON s\'inscrit dans un cadre légal strict, notamment en respectant le Règlement Général sur la Protection des Données (RGPD).',
+        en: 'ANTIGON\'s practice of background checks operates within a strict legal framework, particularly in compliance with the General Data Protection Regulation (GDPR).'
+      }
     },
     investigation: {
       title: { fr: 'SERVICE D\'INVESTIGATION', en: 'INVESTIGATION SERVICE' },
-      subtitle: { fr: 'OBJECTIF :', en: 'OBJECTIVE:' }
+      subtitle: { fr: 'OBJECTIF :', en: 'OBJECTIVE:' },
+      obj1: {
+        fr: 'Se mettre en conformité réglementaire et se prémunir contre les principaux risques de fraude, de réputation ou de corruption pouvant entraîner de lourdes sanctions judiciaires et des pertes financières.',
+        en: 'Achieve regulatory compliance and protect against major risks of fraud, reputation damage, or corruption that could lead to severe legal sanctions and financial losses.'
+      },
+      obj2: {
+        fr: 'Décrypter l\'environnement stratégique et concurrentiel, appréhender les réseaux d\'influence et circuits de décision.',
+        en: 'Decrypt the strategic and competitive environment, understand influence networks and decision-making circuits.'
+      },
+      list: {
+        fr: [
+          'Service opérationnel d\'aide à la décision à destination des services Sûreté et Compliance',
+          'Identifier les menaces',
+          'Vérifier l\'honorabilité et la probité de relations d\'affaires',
+          'Maîtriser les risques à l\'international',
+          'Préservation de preuves numériques',
+          'Appréhender les réseaux d\'influence et circuits de décision'
+        ],
+        en: [
+          'Operational decision support service for Security and Compliance departments',
+          'Identify threats',
+          'Verify the integrity and probity of business relationships',
+          'Master international risks',
+          'Preservation of digital evidence',
+          'Understand influence networks and decision-making circuits'
+        ]
+      }
     },
     audit: {
       title: { fr: 'AUDIT DES OUTILS NUMÉRIQUES', en: 'DIGITAL TOOLS AUDIT' },
-      subtitle: { fr: 'NOUS TRAQUONS LES FAILLES, VOUS GARDEZ LE CONTRÔLE.', en: 'WE TRACK VULNERABILITIES, YOU KEEP CONTROL.' }
+      subtitle: { fr: 'NOUS TRAQUONS LES FAILLES, VOUS GARDEZ LE CONTRÔLE.', en: 'WE TRACK VULNERABILITIES, YOU KEEP CONTROL.' },
+      content1: {
+        fr: 'Les appareils numériques – ordinateurs, téléphones, tablettes – sont devenus des outils indispensables, mais aussi des points d\'entrée privilégiés pour des menaces invisibles.',
+        en: 'Digital devices – computers, phones, tablets – have become essential tools, but also prime entry points for invisible threats.'
+      },
+      content2: {
+        fr: 'Nous réalisons des audits complets de vos équipements afin de garantir qu\'ils sont fiables, protégés et exempts de logiciels malveillants ou espions.',
+        en: 'We conduct comprehensive audits of your equipment to ensure they are reliable, protected, and free from malicious or spyware.'
+      },
+      content3: {
+        fr: 'Contrôle de l\'intégrité des appareils : inspection des systèmes pour détecter toute anomalie ou comportement suspect. Détection de logiciels espions et intrusifs : identification de programmes indésirables pouvant compromettre vos données ou vos communications. Évaluation des paramètres de sécurité : vérification des configurations, accès, mises à jour et protections installées. Recommandations pratiques : mise en place de bonnes pratiques et solutions adaptées pour fiabiliser vos terminaux et limiter les risques futurs.',
+        en: 'Device integrity control: system inspection to detect any anomalies or suspicious behavior. Spyware and intrusive software detection: identification of unwanted programs that could compromise your data or communications. Security settings evaluation: verification of configurations, access, updates, and installed protections. Practical recommendations: implementation of best practices and adapted solutions to secure your terminals and limit future risks.'
+      },
+      content4: {
+        fr: 'Chaque audit est accompagné d\'un rapport clair et détaillé, indiquant le niveau de sûreté de vos appareils et proposant d\'éventuelles mesures correctives concrètes.',
+        en: 'Each audit is accompanied by a clear and detailed report, indicating the security level of your devices and proposing potential concrete corrective measures.'
+      }
     },
     adint: {
       title: { fr: 'PROTECTION DIGITALE OPÉRATIONNELLE – ADINT', en: 'OPERATIONAL DIGITAL PROTECTION – ADINT' },
-      subtitle: { fr: 'ADVERTISING INTELLIGENCE', en: 'ADVERTISING INTELLIGENCE' }
+      subtitle: { fr: 'ADVERTISING INTELLIGENCE', en: 'ADVERTISING INTELLIGENCE' },
+      content1: {
+        fr: 'Les appareils numériques – ordinateurs, téléphones, tablettes – sont devenus des outils indispensables, mais aussi des points d\'entrée privilégiés pour des menaces invisibles. Nous réalisons des audits complets de vos équipements afin de garantir qu\'ils sont fiables, protégés et exempts de logiciels malveillants ou espions.',
+        en: 'Digital devices – computers, phones, tablets – have become essential tools, but also prime entry points for invisible threats. We conduct comprehensive audits of your equipment to ensure they are reliable, protected, and free from malicious or spyware.'
+      },
+      content2: {
+        fr: 'Cette technique permet de détecter une présence, d\'anticiper une menace et de participer à la protection d\'un lieu ou de tiers partout dans le monde entier ; il peut également s\'agir de mener des investigations offensives par exemple mais également de lutter contre l\'espionnage, les fuites d\'information, la concurrence déloyale, etc. Cela permet également de vérifier des liens entre plusieurs « devices » par des recherches croisées « géofencées ».',
+        en: 'This technique allows detecting a presence, anticipating a threat, and participating in the protection of a location or third parties worldwide; it can also involve conducting offensive investigations, as well as fighting espionage, information leaks, unfair competition, etc. It also allows verifying links between multiple "devices" through cross-referenced "geofenced" searches.'
+      },
+      content3: {
+        fr: 'Dans le cadre de la protection d\'un lieu il suffit de tracer sur une carte présente dans la plateforme un « géofencing » du lieu et de rechercher sur des plages de dates l\'ensemble des « devices » présents dans cet environnement. La recherche prend seulement quelques minutes. En utilisant les filtres jour/nuit, les recherches sont affinées pour limiter le nombre de « devices » détectés notamment dans un environnement urbain. La présence régulière d\'un « device » à des heures « non ouvrées » n\'est pas à ce stade un sujet de malveillance mais s\'y intéresser permettre de classer le « device-cible » dans un groupe à analyser.',
+        en: 'For location protection, simply draw a "geofencing" of the location on the platform map and search for all "devices" present in this environment over date ranges. The search takes only a few minutes. Using day/night filters, searches are refined to limit the number of "devices" detected, especially in urban environments. The regular presence of a "device" during "non-business hours" is not at this stage a malicious issue, but examining it allows classifying the "target device" in a group to analyze.'
+      },
+      content4: {
+        fr: 'La recherche permet de remonter les informations concernant l\'identité du « device », le nombre de jours sur la zone, l\'heure de présence, la marque du « device » (Apple/android) et la précision de localisation.',
+        en: 'The search allows retrieving information about the "device" identity, number of days in the area, time of presence, "device" brand (Apple/android), and location accuracy.'
+      }
     }
   },
 
