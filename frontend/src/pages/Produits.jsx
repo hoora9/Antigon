@@ -216,8 +216,8 @@ const Produits = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-white mb-1">VÉRIFIER</h4>
-                  <p className="text-white/85 text-base">l'intégrité de partenaires et fournisseurs.</p>
+                  <h4 className="text-lg font-bold text-white mb-1">VÉRIFIER</h4>
+                  <p className="text-white/85 text-lg">l'intégrité de partenaires et fournisseurs.</p>
                 </div>
               </div>
 
@@ -229,8 +229,8 @@ const Produits = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-white mb-1">SÉCURISER</h4>
-                  <p className="text-white/85 text-base">les recrutements grâce au criblage.</p>
+                  <h4 className="text-lg font-bold text-white mb-1">SÉCURISER</h4>
+                  <p className="text-white/85 text-lg">les recrutements grâce au criblage.</p>
                 </div>
               </div>
 
@@ -242,8 +242,8 @@ const Produits = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-white mb-1">SURVEILLER</h4>
-                  <p className="text-white/85 text-base">la concurrence et anticiper leurs mouvements.</p>
+                  <h4 className="text-lg font-bold text-white mb-1">SURVEILLER</h4>
+                  <p className="text-white/85 text-lg">la concurrence et anticiper leurs mouvements.</p>
                 </div>
               </div>
 
@@ -255,8 +255,8 @@ const Produits = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-white mb-1">PROTÉGER</h4>
-                  <p className="text-white/85 text-base">votre réputation en détectant signaux faibles et campagnes hostiles.</p>
+                  <h4 className="text-lg font-bold text-white mb-1">PROTÉGER</h4>
+                  <p className="text-white/85 text-lg">votre réputation en détectant signaux faibles et campagnes hostiles.</p>
                 </div>
               </div>
 
@@ -268,8 +268,8 @@ const Produits = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-white mb-1">ANALYSER</h4>
-                  <p className="text-white/85 text-base">les risques pays avant vos implantations internationales.</p>
+                  <h4 className="text-lg font-bold text-white mb-1">ANALYSER</h4>
+                  <p className="text-white/85 text-lg">les risques pays avant vos implantations internationales.</p>
                 </div>
               </div>
             </div>
