@@ -158,12 +158,12 @@ const Produits = () => {
             {/* Left Column: Sources */}
             <div className="lg:col-span-5">
               <ul className="space-y-3 text-white/85 text-lg leading-relaxed">
-                <li>• Internet ouvert : sites web, blogs, forums, bases de données publiques.</li>
-                <li>• Réseaux sociaux : Facebook, X/Twitter, LinkedIn, TikTok, etc.</li>
-                <li>• Médias : presse en ligne, télévision, radios.</li>
-                <li>• Images et données satellites : cartographie, photos aériennes.</li>
-                <li>• Sources institutionnelles : registres officiels, rapports publics, publications académiques.</li>
-                <li>• Renseignement publicitaire (ciblage, localisation, etc.)</li>
+                <li>{t({ fr: '• Internet ouvert : sites web, blogs, forums, bases de données publiques.', en: '• Open internet: websites, blogs, forums, public databases.' })}</li>
+                <li>{t({ fr: '• Réseaux sociaux : Facebook, X/Twitter, LinkedIn, TikTok, etc.', en: '• Social networks: Facebook, X/Twitter, LinkedIn, TikTok, etc.' })}</li>
+                <li>{t({ fr: '• Médias : presse en ligne, télévision, radios.', en: '• Media: online press, television, radio.' })}</li>
+                <li>{t({ fr: '• Images et données satellites : cartographie, photos aériennes.', en: '• Satellite images and data: mapping, aerial photos.' })}</li>
+                <li>{t({ fr: '• Sources institutionnelles : registres officiels, rapports publics, publications académiques.', en: '• Institutional sources: official registers, public reports, academic publications.' })}</li>
+                <li>{t({ fr: '• Renseignement publicitaire (ciblage, localisation, etc.)', en: '• Advertising intelligence (targeting, location, etc.)' })}</li>
               </ul>
               
               {/* Arrow Down */}
@@ -175,7 +175,7 @@ const Produits = () => {
               </div>
               
               <p className="text-center text-white font-semibold text-lg mb-4">
-                Sélection, recoupement, analyse et exploitation
+                {t({ fr: 'Sélection, recoupement, analyse et exploitation', en: 'Selection, cross-referencing, analysis and exploitation' })}
               </p>
               
               {/* Arrow Down */}
@@ -187,7 +187,10 @@ const Produits = () => {
               </div>
               
               <p className="text-white/85 text-lg leading-relaxed">
-                • Les risques sont <span className="text-white font-bold">maîtrisés</span>, la probité des employés est <span className="text-white font-bold">objectivée</span>, la concurrence est <span className="text-white font-bold">modélisée</span>, la e-réputation est <span className="text-white font-bold">monitorée</span>, l'environnement est <span className="text-white font-bold">surveillé</span>.
+                {t({ 
+                  fr: '• Les risques sont maîtrisés, la probité des employés est objectivée, la concurrence est modélisée, la e-réputation est monitorée, l\'environnement est surveillé.',
+                  en: '• Risks are controlled, employee integrity is objectified, competition is modeled, e-reputation is monitored, the environment is surveilled.'
+                }).split('maîtrisés').join('<strong>maîtrisés</strong>').split('objectivée').join('<strong>objectivée</strong>').split('modélisée').join('<strong>modélisée</strong>').split('monitorée').join('<strong>monitorée</strong>').split('surveillé').join('<strong>surveillé</strong>').split('controlled').join('<strong>controlled</strong>').split('objectified').join('<strong>objectified</strong>').split('modeled').join('<strong>modeled</strong>').split('monitored').join('<strong>monitored</strong>').split('surveilled').join('<strong>surveilled</strong>')}
               </p>
             </div>
 
