@@ -15,10 +15,10 @@ const Produits = () => {
             {/* Left Column: Qui sommes nous */}
             <div className="space-y-6">
               <h2 className="text-4xl font-semibold text-white mb-6">
-                Qui sommes nous ?
+                {t(translations.products.title)}
               </h2>
               <p className="text-lg text-white/85 leading-relaxed">
-                ANTIGON est une Entreprise de Services de Sûreté et de Défense (ESSD) qui s'inscrit dans le continuum sécurité-défense, à la croisée du secteur public et du privé. ANTIGON incarne une réponse moderne et agile qui s'adapte à la demande sécuritaire en agissant comme ensemblier ou agrégateur, capable de traiter des problématiques complexes intégrant des prestations multi-domaines.
+                {t(translations.products.description)}
               </p>
             </div>
 
