@@ -13,8 +13,22 @@ export const translations = {
   footer: {
     legal: { fr: 'Mentions légales', en: 'Legal Notice' },
     privacy: { fr: 'Politique de protection des données', en: 'Data Protection Policy' },
-    charter: { fr: 'Charte éthique', en: 'Ethics Charter' },
-    conduct: { fr: 'Code de conduite', en: 'Code of Conduct' },
+    charter: { 
+      fr: 'Charte éthique', 
+      en: 'Ethics Charter' 
+    },
+    charterUrl: {
+      fr: 'https://customer-assets.emergentagent.com/job_guardianportal/artifacts/56rwjkd0_ANTIGON%20Ethical%20%20Deontological%20Charter%202025%20%28FR%29.pdf',
+      en: 'https://customer-assets.emergentagent.com/job_guardianportal/artifacts/56rwjkd0_ANTIGON%20Ethical%20%20Deontological%20Charter%202025%20%28FR%29.pdf'
+    },
+    conduct: { 
+      fr: 'Code de conduite', 
+      en: 'Code of Conduct' 
+    },
+    conductUrl: {
+      fr: 'https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/zjehyrjs_ANTIGON%20Code%20of%20Conduct%20%26%20Ethics%20-%202025%20%28FR%29.pdf',
+      en: 'https://customer-assets.emergentagent.com/job_guardianportal/artifacts/n2s6kvxt_ANTIGON%20Code%20of%20Conduct%20%26%20Ethics%20%E2%80%93%202025%20%28ENG%29.pdf'
+    },
     copyright: { fr: 'ANTIGON 2025', en: 'ANTIGON 2025' }
   },
 
