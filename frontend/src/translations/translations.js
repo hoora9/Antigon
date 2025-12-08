@@ -19,7 +19,7 @@ export const translations = {
     },
     charterUrl: {
       fr: 'https://customer-assets.emergentagent.com/job_guardianportal/artifacts/56rwjkd0_ANTIGON%20Ethical%20%20Deontological%20Charter%202025%20%28FR%29.pdf',
-      en: 'https://customer-assets.emergentagent.com/job_guardianportal/artifacts/56rwjkd0_ANTIGON%20Ethical%20%20Deontological%20Charter%202025%20%28FR%29.pdf'
+      en: 'https://customer-assets.emergentagent.com/job_guardianportal/artifacts/7ih74dr0_ANTIGON%20Code%20of%20Conduct%20%26%20Ethics%20%E2%80%93%202025%20%28ENG%29.pdf'
     },
     conduct: { 
       fr: 'Code de conduite', 
