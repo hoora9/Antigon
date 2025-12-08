@@ -18,11 +18,16 @@ const Footer = () => {
             <Link to="/politique" className="text-[#4D4D4D] hover:text-white transition-colors">
               {t(translations.footer.privacy)}
             </Link>
-            <Link to="/charte" className="text-[#4D4D4D] hover:text-white transition-colors">
-              {t(translations.footer.charter)}
-            </Link>
             <a 
-              href="https://customer-assets.emergentagent.com/job_antigon-cyber/artifacts/zjehyrjs_ANTIGON%20Code%20of%20Conduct%20%26%20Ethics%20-%202025%20%28FR%29.pdf" 
+              href={t(translations.footer.charterUrl)} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-[#4D4D4D] hover:text-white transition-colors"
+            >
+              {t(translations.footer.charter)}
+            </a>
+            <a 
+              href={t(translations.footer.conductUrl)} 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-[#4D4D4D] hover:text-white transition-colors"
