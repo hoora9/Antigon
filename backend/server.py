@@ -67,12 +67,15 @@ async def send_devis(devis: DevisRequest):
     """Send devis request via email"""
     try:
         # Get SMTP configuration from environment
-        smtp_host = os.environ.get('SMTP_HOST', 'smtp.gmail.com')
+        smtp_host = os.environ.get('SMTP_HOST', 'smtp.ionos.com')
         smtp_port = int(os.environ.get('SMTP_PORT', 587))
         smtp_user = os.environ.get('SMTP_USER')
         smtp_password = os.environ.get('SMTP_PASSWORD')
         sender_email = os.environ.get('SMTP_FROM', smtp_user)
-        receiver_email = os.environ.get('SMTP_TO', 'hoora9ahmed@gmail.com')
+        receiver_emails_str = os.environ.get('SMTP_TO', 'richard.terzan@antigon.com,adhemar.pages@antigon.com')
+        
+        # Parse multiple recipients (comma-separated)
+        receiver_emails = [email.strip() for email in receiver_emails_str.split(',')]
         
         # Create email content
         subject = f"Nouvelle demande de devis - {devis.nom} {devis.prenom}"
@@ -95,7 +98,7 @@ Message envoyé depuis le site ANTIGON
         # Create message
         message = MIMEMultipart()
         message["From"] = sender_email
-        message["To"] = receiver_email
+        message["To"] = ", ".join(receiver_emails)
         message["Subject"] = subject
         message.attach(MIMEText(body, "plain"))
         
@@ -105,7 +108,7 @@ Message envoyé depuis le site ANTIGON
                 server.starttls()  # Enable TLS
                 server.login(smtp_user, smtp_password)
                 server.send_message(message)
-                logger.info(f"Email sent successfully to {receiver_email}")
+                logger.info(f"Email sent successfully to {', '.join(receiver_emails)}")
         except Exception as smtp_error:
             logger.error(f"SMTP Error: {str(smtp_error)}")
             # Continue to store in database even if email fails
