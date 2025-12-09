@@ -67,7 +67,7 @@ async def send_devis(devis: DevisRequest):
     """Send devis request via email"""
     try:
         # Get SMTP configuration from environment
-        smtp_host = os.environ.get('SMTP_HOST', 'smtp.ionos.com')
+        smtp_host = os.environ.get('SMTP_HOST', 'smtp.ionos.fr')
         smtp_port = int(os.environ.get('SMTP_PORT', 587))
         smtp_user = os.environ.get('SMTP_USER')
         smtp_password = os.environ.get('SMTP_PASSWORD')
