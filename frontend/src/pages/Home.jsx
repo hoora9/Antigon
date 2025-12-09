@@ -11,18 +11,6 @@ const Home = () => {
     <div className="min-h-screen bg-black pt-[80px]">
       {/* Hero Section with Spline 3D */}
       <section className="relative min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden">
-        {/* Background Grid Pattern */}
-        <div 
-          className="absolute inset-0" 
-          style={{
-            backgroundImage: `
-              repeating-linear-gradient(0deg, transparent, transparent 1px, transparent 1px, transparent 7.6923%),
-              repeating-linear-gradient(-90deg, #fff, #fff 1px, transparent 1px, transparent 7.6923%)
-            `,
-            backgroundSize: '100% 100%',
-            opacity: 0.14
-          }}
-        />
 
         <div className="relative z-10 max-w-[1400px] mx-auto px-[7.6923%] w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
