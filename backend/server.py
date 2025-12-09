@@ -104,11 +104,16 @@ Message envoyé depuis le site ANTIGON
         
         # Send email via SMTP
         try:
-            with smtplib.SMTP(smtp_host, smtp_port) as server:
+            with smtplib.SMTP(smtp_host, smtp_port, timeout=30) as server:
+                server.set_debuglevel(0)
+                server.ehlo()
                 server.starttls()  # Enable TLS
+                server.ehlo()
                 server.login(smtp_user, smtp_password)
                 server.send_message(message)
                 logger.info(f"Email sent successfully to {', '.join(receiver_emails)}")
+        except smtplib.SMTPAuthenticationError as auth_error:
+            logger.error(f"SMTP Authentication Error: {str(auth_error)} - Please verify IONOS credentials")
         except Exception as smtp_error:
             logger.error(f"SMTP Error: {str(smtp_error)}")
             # Continue to store in database even if email fails
