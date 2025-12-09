@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANTIGON | Security and Defense Services</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: #000000;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .antigon-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 7.6923%;
+    }
+
+    /* HEADER */
+    .antigon-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #000000;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .antigon-header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1.5rem 7.6923%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .antigon-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: 2px;
+    }
+
+    .antigon-nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .antigon-nav a {
+      color: #4D4D4D;
+      text-decoration: none;
+      font-size: 1.125rem;
+      transition: color 0.3s;
+    }
+
+    .antigon-nav a:hover {
+      color: #ffffff;
+    }
+
+    .antigon-nav-button {
+      background: linear-gradient(135deg, #6FD2C0 0%, #4DBAA9 100%);
+      color: #000000 !important;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: transform 0.2s;
+    }
+
+    .antigon-nav-button:hover {
+      transform: translateY(-2px);
+    }
+
+    .antigon-header-separator {
+      height: 80px;
+    }
+
+    /* HERO */
+    .antigon-hero {
+      min-height: calc(100vh - 80px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: 
+        repeating-linear-gradient(0deg, transparent, transparent 1px, transparent 1px, transparent 7.6923%),
+        repeating-linear-gradient(-90deg, #fff, #fff 1px, transparent 1px, transparent 7.6923%);
+      background-size: 100% 100%;
+    }
+
+    .antigon-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: inherit;
+      opacity: 0.14;
+    }
+
+    .antigon-hero-text {
+      font-size: 4rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-bottom: 2rem;
+      line-height: 1.2;
+      position: relative;
+      z-index: 1;
+    }
+
+    .antigon-hero-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: linear-gradient(135deg, #6FD2C0 0%, #4DBAA9 100%);
+      color: #000000;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.125rem;
+      transition: transform 0.2s;
+      position: relative;
+      z-index: 1;
+    }
+
+    .antigon-hero-button:hover {
+      transform: translateY(-2px);
+    }
+
+    /* SECTIONS */
+    .antigon-section {
+      padding: 5rem 0;
+      background-color: #000000;
+    }
+
+    .antigon-section-title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      color: #ffffff;
+    }
+
+    .antigon-section-text {
+      font-size: 1.125rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.8;
+    }
+
+    .antigon-two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    /* ACCORDION */
+    .antigon-accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .antigon-accordion-item {
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background-color: #121212;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .antigon-accordion-question {
+      padding: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #ffffff;
+      user-select: none;
+    }
+
+    .antigon-accordion-question:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .antigon-accordion-icon {
+      font-size: 1.5rem;
+      transition: transform 0.3s;
+    }
+
+    .antigon-accordion-item.active .antigon-accordion-icon {
+      transform: rotate(45deg);
+    }
+
+    .antigon-accordion-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+
+    .antigon-accordion-item.active .antigon-accordion-answer {
+      max-height: 2000px;
+      transition: max-height 0.5s ease-in;
+    }
+
+    .antigon-accordion-content {
+      padding: 0 1.5rem 1.5rem 1.5rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.8;
+    }
+
+    .antigon-accordion-content p {
+      margin-bottom: 1rem;
+    }
+
+    .antigon-accordion-list {
+      list-style: disc;
+      margin-left: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .antigon-accordion-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    .antigon-accordion-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+    }
+
+    .antigon-accordion-table th,
+    .antigon-accordion-table td {
+      text-align: left;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .antigon-accordion-table th {
+      font-weight: 600;
+    }
+
+    /* TIMELINE */
+    .antigon-timeline {
+      padding: 5rem 0;
+      background-color: #070707;
+    }
+
+    .antigon-timeline-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .antigon-timeline-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: #ffffff;
+    }
+
+    .antigon-timeline-subtitle {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin: 2rem 0 1rem 0;
+    }
+
+    .antigon-timeline-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 6rem;
+      position: relative;
+      padding: 2rem 0;
+      margin: 3rem 0;
+    }
+
+    .antigon-timeline-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: translateX(-50%);
+    }
+
+    .antigon-timeline-step {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      position: relative;
+    }
+
+    .antigon-timeline-step:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .antigon-timeline-number {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      background-color: #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      font-weight: bold;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .antigon-timeline-step-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #c9a55a;
+      margin-bottom: 0.25rem;
+    }
+
+    .antigon-timeline-step-desc {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.125rem;
+    }
+
+    .antigon-timeline-conclusion {
+      text-align: center;
+      padding: 2rem;
+      border: 2px solid #ffffff;
+      color: #c9a55a;
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-top: 3rem;
+    }
+
+    /* SERVICES */
+    .antigon-services {
+      padding: 5rem 0;
+      background-color: #000000;
+    }
+
+    .antigon-services-grid {
+      display: grid;
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .antigon-service-card {
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 2rem;
+      border-radius: 8px;
+      background-color: #0a0a0a;
+    }
+
+    .antigon-service-title {
+      font-size: 1.875rem;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+    }
+
+    .antigon-service-subtitle {
+      font-size: 1.25rem;
+      color: #c9a55a;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .antigon-service-content {
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .antigon-service-content p {
+      margin-bottom: 1rem;
+    }
+
+    .antigon-service-content ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .antigon-service-content li {
+      margin-bottom: 0.5rem;
+    }
+
+    .antigon-service-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #6FD2C0 0%, #4DBAA9 100%);
+      color: #000000;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s;
+    }
+
+    .antigon-service-button:hover {
+      transform: translateY(-2px);
+    }
+
+    /* PUBLICATIONS */
+    .antigon-publications {
+      padding: 5rem 0;
+      background-color: #000000;
+    }
+
+    .antigon-publications-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .antigon-publication-item {
+      display: flex;
+      gap: 2rem;
+      padding: 1.5rem;
+      border-left: 3px solid #6FD2C0;
+      background-color: rgba(111, 210, 192, 0.05);
+    }
+
+    .antigon-publication-date {
+      color: #6FD2C0;
+      font-weight: 600;
+      min-width: 100px;
+    }
+
+    .antigon-publication-title {
+      color: rgba(255, 255, 255, 0.85);
+      flex: 1;
+    }
+
+    /* CONTACT/DEVIS */
+    .antigon-devis {
+      padding: 5rem 0;
+      background-color: #070707;
+    }
+
+    .antigon-form {
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+
+    .antigon-form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .antigon-form-label {
+      display: block;
+      color: #ffffff;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .antigon-form-input,
+    .antigon-form-textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background-color: #1a1a1a;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 4px;
+      color: #ffffff;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+
+    .antigon-form-textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .antigon-form-input:focus,
+    .antigon-form-textarea:focus {
+      outline: none;
+      border-color: #6FD2C0;
+    }
+
+    .antigon-form-submit {
+      width: 100%;
+      background: linear-gradient(135deg, #6FD2C0 0%, #4DBAA9 100%);
+      color: #000000;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.125rem;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .antigon-form-submit:hover {
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    .antigon-footer {
+      background-color: #000000;
+      border-top: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 1.5rem 0;
+    }
+
+    .antigon-footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 7.6923%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .antigon-footer-link {
+      color: #4D4D4D;
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.3s;
+    }
+
+    .antigon-footer-link:hover {
+      color: #ffffff;
+    }
+
+    .antigon-footer-text {
+      color: #4D4D4D;
+      font-size: 0.875rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .antigon-nav {
+        display: none;
+      }
+
+      .antigon-hero-text {
+        font-size: 2.5rem;
+      }
+
+      .antigon-two-column {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .antigon-timeline-steps {
+        gap: 3rem;
+      }
+
+      .antigon-timeline-step {
+        flex-direction: column !important;
+        text-align: center;
+      }
+
+      .antigon-publication-item {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .antigon-footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="antigon-header">
+  <div class="antigon-header-content">
+    <a href="#" class="antigon-logo">ANTIGON</a>
+    <nav class="antigon-nav">
+      <a href="#apropos">A Propos</a>
+      <a href="#produits">Produits</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="#publications">Publications</a>
+      <a href="#devis" class="antigon-nav-button">Demander un Devis</a>
+    </nav>
+  </div>
+</header>
+<div class="antigon-header-separator"></div>
+
+<!-- HERO SECTION -->
+<section class="antigon-hero">
+  <div class="antigon-container">
+    <h1 class="antigon-hero-text">Exposer l'invisible, sécuriser l'essentiel.</h1>
+    <a href="#apropos" class="antigon-hero-button">En Savoir Plus</a>
+  </div>
+</section>
+
+<!-- PRODUITS SECTION - A PROPOS -->
+<section id="apropos" class="antigon-section">
+  <div class="antigon-container">
+    <div class="antigon-two-column">
+      
+      <!-- Left: Who are we -->
+      <div>
+        <h2 class="antigon-section-title">Qui sommes nous ?</h2>
+        <p class="antigon-section-text">
+          ANTIGON est une Entreprise de Services de Sûreté et de Défense (ESSD) qui s'inscrit dans le continuum sécurité-défense, à la croisée du secteur public et du privé. ANTIGON incarne une réponse moderne et agile qui s'adapte à la demande sécuritaire en agissant comme ensemblier ou agrégateur, capable de traiter des problématiques complexes intégrant des prestations multi-domaines.
+        </p>
+      </div>
+      
+      <!-- Right: Accordion FAQ -->
+      <div class="antigon-accordion">
+        
+        <div class="antigon-accordion-item">
+          <div class="antigon-accordion-question">
+            Qu'est ce que l'OSINT ?
+            <span class="antigon-accordion-icon">+</span>
+          </div>
+          <div class="antigon-accordion-answer">
+            <div class="antigon-accordion-content">
+              <p>Derrière les lettres OSINT se cache une immense masse de données qui ont un point commun essentiel : elles sont toutes accessibles publiquement et leur acquisition est légale et non intrusive. On parle ici d'informations accessibles et non classifiées.</p>
+              <p>L'OSINT, très précisément, c'est l'Open Source Intelligence ou en français l'acronyme ROSO (Renseignement d'Origine Sources Ouvertes). Il désigne la capacité d'acquérir et d'analyser des données publiques pour en tirer des prévisions ou une meilleure compréhension d'un phénomène ou d'une situation.</p>
+              <p>Il ne s'agit pas seulement de "googler" une requête, mais d'exploiter méthodiquement des sources ouvertes (sites web, réseaux sociaux, bases de données, forums, documents publics, fuites, etc.) pour produire un renseignement actionnable.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="antigon-accordion-item">
+          <div class="antigon-accordion-question">
+            A quoi sert l'OSINT ?
+            <span class="antigon-accordion-icon">+</span>
+          </div>
+          <div class="antigon-accordion-answer">
+            <div class="antigon-accordion-content">
+              <p>Il est relativement aisé de comprendre l'intérêt stratégique que peut représenter l'analyse des données publiques dans le domaine cyber. Mais l'OSINT trouve des applications bien au-delà de la seule question des attaques informatiques.</p>
+              <p>L'OSINT est mise à profit pour la lutte contre le terrorisme, les cybermenaces, les pratiques financières frauduleuses, l'usurpation, la désinformation et toutes formes d'activités illégales. Il s'agit donc d'une cellule d'activité aussi précieuse pour les États que pour les entreprises.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="antigon-accordion-item">
+          <div class="antigon-accordion-question">
+            Quelles informations recouvrent l'OSINT ?
+            <span class="antigon-accordion-icon">+</span>
+          </div>
+          <div class="antigon-accordion-answer">
+            <div class="antigon-accordion-content">
+              <p>La mise en place et le développement de l'OSINT est en lien direct avec le contexte international actuel : c'est bien parce que nous vivons à l'ère de l'information, de la sur-numérisation et du tout digital que l'OSINT trouve matière à exister. Ce sont les milliers d'échanges qui ont lieu entre des milliards d'individus au jour le jour sur Internet qui fait apparaître, dans la sphère numérique, une multitude de données accessibles publiquement.</p>
+              <p>Cet océan de données représente une source de renseignements inouïe. Outre le travail d'analyse et de recherche en soi, le terme d'OSINT désigne aussi directement ce volume d'informations colossal.</p>
+              <p><strong>L'OSINT est un outil stratégique pour :</strong></p>
+              <ul class="antigon-accordion-list">
+                <li>La cybersécurité (recherche d'identifiants compromis, shadow IT, cartographie d'infrastructure)</li>
+                <li>La sûreté (profilage de menaces, veille réputationnelle, cartographie humaine)</li>
+                <li>L'intelligence économique (veille concurrentielle, due diligence)</li>
+                <li>Les forces de l'ordre (lutte contre le terrorisme, la fraude, les trafics)</li>
+                <li>Les entreprises sensibles (détection de signaux faibles, risques pays, fuites internes)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="antigon-accordion-item">
+          <div class="antigon-accordion-question">
+            Quels sont les types d'OSINT ?
+            <span class="antigon-accordion-icon">+</span>
+          </div>
+          <div class="antigon-accordion-answer">
+            <div class="antigon-accordion-content">
+              <table class="antigon-accordion-table">
+                <tr>
+                  <th>TYPE</th>
+                  <th>DESCRIPTION</th>
+                  <th>RISQUES</th>
+                </tr>
+                <tr>
+                  <td>OSINT Passif</td>
+                  <td>Collecte de données publiquement accessibles sans interaction avec la cible</td>
+                  <td>Discrétion maximale, mais risque de données obsolètes</td>
+                </tr>
+                <tr>
+                  <td>OSINT Actif</td>
+                  <td>Utilisation d'outils de scan ou d'interaction directe (par exemple via un crawler ou une requête DNS)</td>
+                  <td>Moins discret, risque de détection par la cible</td>
+                </tr>
+              </table>
+              <p><strong>Quelles sont les sources OSINT les plus courantes ?</strong></p>
+              <ul class="antigon-accordion-list">
+                <li>Web ouvert (sites institutionnels, presse, données légales)</li>
+                <li>Réseaux sociaux (LinkedIn, X/Twitter, Telegram, TikTok)</li>
+                <li>Données techniques (Shodan, Censys, PublicWWW, GitHub)</li>
+                <li>Bases de leaks (HaveIBeenPwned, Bayonet, Pastebin, forums)</li>
+                <li>Données gouvernementales (marchés publics, brevets, registres légaux)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="antigon-accordion-item">
+          <div class="antigon-accordion-question">
+            En quoi la plateforme ANTIGON est-elle différente des autres ?
+            <span class="antigon-accordion-icon">+</span>
+          </div>
+          <div class="antigon-accordion-answer">
+            <div class="antigon-accordion-content">
+              <p>ANTIGON n'est pas seulement une plateforme OSINT, Il s'agit d'une plateforme holistique de WEBINT qui cumule GEOINT (imagerie satellite), ADINT (Advertising Intel), SOCMINT (Social Media Intel) & FININT (Financial Intel) dans une solution modulaire et enrichie par de l'IA.</p>
+              <p><strong>ANTIGON – une couverture complète de l'empreinte numérique :</strong></p>
+              <ul class="antigon-accordion-list">
+                <li>Extraction automatisée de la «signature digitale» d'un individu ou groupe</li>
+                <li>Recherche par : nom, pseudo, téléphone, email, adresse IP, portefeuille crypto, réseaux sociaux, etc.</li>
+                <li>Cartographie relationnelle & chronologie automatisées</li>
+                <li>Sémantisation, catégorisation, OCR (Reconnaissance Faciale Intégrée)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE SECTION -->
+<section id="produits" class="antigon-timeline">
+  <div class="antigon-container">
+    <div class="antigon-timeline-header">
+      <h3 class="antigon-timeline-title">Sources:</h3>
+      <ul class="antigon-accordion-list">
+        <li>Internet ouvert : sites web, blogs, forums, bases de données publiques</li>
+        <li>Réseaux sociaux : Facebook, X/Twitter, LinkedIn, TikTok, etc.</li>
+        <li>Médias : presse en ligne, télévision, radios</li>
+        <li>Images et données satellites : cartographie, photos aériennes</li>
+        <li>Sources institutionnelles : registres officiels, rapports publics, publications académiques</li>
+        <li>Renseignement publicitaire (ciblage, localisation, etc.)</li>
+      </ul>
+      <p class="antigon-timeline-subtitle">Sélection, recoupement, analyse et exploitation</p>
+      <p class="antigon-section-text">Les risques sont maitrisés, la probité des employés est objectivée, la concurrence est modélisée, la e-réputation est monitorée, l'environnement est surveillé.</p>
+    </div>
+    
+    <div class="antigon-timeline-steps">
+      <div class="antigon-timeline-line"></div>
+      
+      <div class="antigon-timeline-step">
+        <div class="antigon-timeline-number">1</div>
+        <div>
+          <div class="antigon-timeline-step-title">VÉRIFIER</div>
+          <div class="antigon-timeline-step-desc">l'intégrité de partenaires et fournisseurs.</div>
+        </div>
+      </div>
+      
+      <div class="antigon-timeline-step">
+        <div class="antigon-timeline-number">2</div>
+        <div>
+          <div class="antigon-timeline-step-title">SÉCURISER</div>
+          <div class="antigon-timeline-step-desc">les recrutements grâce au criblage.</div>
+        </div>
+      </div>
+      
+      <div class="antigon-timeline-step">
+        <div class="antigon-timeline-number">3</div>
+        <div>
+          <div class="antigon-timeline-step-title">SURVEILLER</div>
+          <div class="antigon-timeline-step-desc">la concurrence et anticiper leurs mouvements.</div>
+        </div>
+      </div>
+      
+      <div class="antigon-timeline-step">
+        <div class="antigon-timeline-number">4</div>
+        <div>
+          <div class="antigon-timeline-step-title">PROTÉGER</div>
+          <div class="antigon-timeline-step-desc">votre réputation en détectant signaux faibles et campagnes hostiles.</div>
+        </div>
+      </div>
+      
+      <div class="antigon-timeline-step">
+        <div class="antigon-timeline-number">5</div>
+        <div>
+          <div class="antigon-timeline-step-title">ANALYSER</div>
+          <div class="antigon-timeline-step-desc">les risques pays avant vos implantations internationales.</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="antigon-timeline-conclusion">
+      EN RÉSUMÉ : L'OSINT TRANSFORME L'INFORMATION PUBLIQUE EN AVANTAGE STRATÉGIQUE POUR VOTRE ENTREPRISE.
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services" class="antigon-services">
+  <div class="antigon-container">
+    <h2 class="antigon-section-title">Services</h2>
+    
+    <div class="antigon-services-grid">
+      
+      <!-- Service 1: DEFAC -->
+      <div class="antigon-service-card">
+        <h3 class="antigon-service-title">DEFAC (DEEP FAKE CLEANSING)</h3>
+        <p class="antigon-service-subtitle">DÉTECTION ET LUTTE CONTRE LES DEEPFAKES</p>
+        <div class="antigon-service-content">
+          <p><strong>LES DEEPFAKES SONT DE PLUS EN PLUS SOPHISTIQUÉS, ET PEUVENT ÊTRE UTILISÉS POUR :</strong></p>
+          <p>Propagande politique, diffamation de personnalités publiques, diffusion de fausses informations, harcèlement ou vengeance numérique, escroqueries ou fraudes financières, des stratégies de détection multi-supports (image, vidéo, audio, texte).</p>
+          <p><strong>ANTIGON lutte contre cette menace via :</strong> L'expérience en fraude documentaire et des outils puissants pour détecter les artefacts visuels et audio.</p>
+        </div>
+        <a href="#devis" class="antigon-service-button">Je me protège !</a>
+      </div>
+      
+      <!-- Service 2: Background Check -->
+      <div class="antigon-service-card">
+        <h3 class="antigon-service-title">BACKGROUND CHECK</h3>
+        <p class="antigon-service-subtitle">COLLECTEUR ET VERIFICATEUR DE DONNÉES</p>
+        <div class="antigon-service-content">
+          <p>Les background checks, ou vérifications d'antécédents, sont des processus d'enquête visant à collecter et vérifier des informations relatives à une personne. Ils permettent de s'assurer de la véracité des données fournies, telles que les diplômes, les expériences professionnelles, les références, ou encore l'existence éventuelle d'antécédents judiciaires.</p>
+          <p>La pratique des background checks selon ANTIGON s'inscrit dans un cadre légal strict, notamment en respectant le Règlement Général sur la Protection des Données (RGPD).</p>
+        </div>
+        <a href="#devis" class="antigon-service-button">Je me protège !</a>
+      </div>
+      
+      <!-- Service 3: Investigation -->
+      <div class="antigon-service-card">
+        <h3 class="antigon-service-title">SERVICE D'INVESTIGATION</h3>
+        <p class="antigon-service-subtitle">OBJECTIF :</p>
+        <div class="antigon-service-content">
+          <p><strong>Se mettre en conformité réglementaire et se prémunir contre les principaux risques de fraude, de réputation ou de corruption pouvant entrainer de lourdes sanctions judiciaires et des pertes financières.</strong></p>
+          <p><strong>Décrypter l'environnement stratégique et concurrentiel, appréhender les réseaux d'influence et circuits de décision.</strong></p>
+          <ul>
+            <li>Service opérationnel d'aide à la décision à destination des services Sûreté et Compliance</li>
+            <li>Identifier les menaces</li>
+            <li>Vérifier l'honorabilité et la probité de relations d'affaires</li>
+            <li>Maîtriser les risques à l'international</li>
+            <li>Préservation de preuves numériques</li>
+            <li>Appréhender les réseaux d'influence et circuits de décision</li>
+          </ul>
+        </div>
+        <a href="#devis" class="antigon-service-button">Je me protège !</a>
+      </div>
+      
+      <!-- Service 4: Audit -->
+      <div class="antigon-service-card">
+        <h3 class="antigon-service-title">AUDIT DES OUTILS NUMÉRIQUES</h3>
+        <p class="antigon-service-subtitle">NOUS TRAQUONS LES FAILLES, VOUS GARDEZ LE CONTRÔLE.</p>
+        <div class="antigon-service-content">
+          <p>Les appareils numériques – ordinateurs, téléphones, tablettes – sont devenus des outils indispensables, mais aussi des points d'entrée privilégiés pour des menaces invisibles.</p>
+          <p>Nous réalisons des audits complets de vos équipements afin de garantir qu'ils sont fiables, protégés et exempts de logiciels malveillants ou espions.</p>
+          <p>Chaque audit est accompagné d'un rapport clair et détaillé, indiquant le niveau de sûreté de vos appareils et proposant d'éventuelles mesures correctives concrètes.</p>
+          <ul>
+            <li><strong>Contrôle de l'intégrité des appareils :</strong> inspection des systèmes pour détecter toute anomalie ou comportement suspect</li>
+            <li><strong>Détection de logiciels espions et intrusifs :</strong> identification de programmes indésirables pouvant compromettre vos données ou vos communications</li>
+            <li><strong>Évaluation des paramètres de sécurité :</strong> vérification des configurations, accès, mises à jour et protections installées</li>
+            <li><strong>Recommandations pratiques :</strong> mise en place de bonnes pratiques et solutions adaptées pour fiabiliser vos terminaux et limiter les risques futurs</li>
+          </ul>
+        </div>
+        <a href="#devis" class="antigon-service-button">Je me protège !</a>
+      </div>
+      
+      <!-- Service 5: ADINT -->
+      <div class="antigon-service-card">
+        <h3 class="antigon-service-title">PROTECTION DIGITALE OPÉRATIONNELLE - ADINT</h3>
+        <p class="antigon-service-subtitle">(ADVERTISING INTELLIGENCE)</p>
+        <div class="antigon-service-content">
+          <p>Les appareils numériques – ordinateurs, téléphones, tablettes – sont devenus des outils indispensables, mais aussi des points d'entrée privilégiés pour des menaces invisibles. Nous réalisons des audits complets de vos équipements afin de garantir qu'ils sont fiables, protégés et exempts de logiciels malveillants ou espions.</p>
+          <p>Cette technique permet de détecter une présence, d'anticiper une menace et de participer à la protection d'un lieu ou de tiers partout dans le monde entier ; il peut également s'agir de mener des investigations offensives par exemple mais également de lutter contre l'espionnage, les fuites d'information, la concurrence déloyale, etc.</p>
+          <p><strong>Géofencing :</strong> Dans le cadre de la protection d'un lieu il suffit de tracer sur une carte présente dans la plate-forme un « géofencing » du lieu et de rechercher sur des plages de dates l'ensemble des « devices » présents dans cet environnement.</p>
+        </div>
+        <a href="#devis" class="antigon-service-button">Je me protège !</a>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS SECTION -->
+<section id="publications" class="antigon-publications">
+  <div class="antigon-container">
+    <h2 class="antigon-section-title">Publications 2025</h2>
+    
+    <div class="antigon-publications-list">
+      <div class="antigon-publication-item">
+        <div class="antigon-publication-date">11/06/2025</div>
+        <div class="antigon-publication-title">Comment se prémunir des hackers et du vol de nos données sur internet ?</div>
+      </div>
+      
+      <div class="antigon-publication-item">
+        <div class="antigon-publication-date">05/06/2025</div>
+        <div class="antigon-publication-title">Cybersécurité : Baptiste Robert à La Réunion et à Mayotte pour la deuxième édition du Not[B]Hacked</div>
+      </div>
+      
+      <div class="antigon-publication-item">
+        <div class="antigon-publication-date">30/04/2025</div>
+        <div class="antigon-publication-title">Des cyberattaques russes identifiées en France</div>
+      </div>
+      
+      <div class="antigon-publication-item">
+        <div class="antigon-publication-date">04/04/2025</div>
+        <div class="antigon-publication-title">Quand les pirates s'attaquent à la double authentification de nos comptes en ligne</div>
+      </div>
+      
+      <div class="antigon-publication-item">
+        <div class="antigon-publication-date">15/03/2025</div>
+        <div class="antigon-publication-title">Building emotional resilience to fight disinformation</div>
+      </div>
+      
+      <div class="antigon-publication-item">
+        <div class="antigon-publication-date">16/01/2025</div>
+        <div class="antigon-publication-title">Envie de quitter TikTok pour RedNote ? Faites attention</div>
+      </div>
+      
+      <div class="antigon-publication-item">
+        <div class="antigon-publication-date">15/01/2025</div>
+        <div class="antigon-publication-title">Privacy of millions worldwide compromised as huge data location broker got hacked</div>
+      </div>
+      
+      <div class="antigon-publication-item">
+        <div class="antigon-publication-date">14/01/2025</div>
+        <div class="antigon-publication-title">Tinder, Grindr, Candy Crush... des millions de données de géolocalisation ont été piratées</div>
+      </div>
+      
+      <div class="antigon-publication-item">
+        <div class="antigon-publication-date">13/01/2025</div>
+        <div class="antigon-publication-title">A breach of Gravy Analytics' huge trove of location data threatens the privacy of millions</div>
+      </div>
+      
+      <div class="antigon-publication-item">
+        <div class="antigon-publication-date">10/01/2025</div>
+        <div class="antigon-publication-title">Millions of people's 'intimate' location data stolen in major hack</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT/DEVIS SECTION -->
+<section id="devis" class="antigon-devis">
+  <div class="antigon-container">
+    <h2 class="antigon-section-title" style="text-align: center;">Demander un Devis</h2>
+    <p class="antigon-section-text" style="text-align: center; margin-bottom: 2rem;">
+      ANTIGON FAIT DE VOTRE SATISFACTION UNE PRIORITÉ, EXPOSEZ-NOUS VOTRE REQUÊTE, NOUS REVIENDRONS VERS VOUS AVEC UN DEVIS CLAIR ET SIMPLE :
+    </p>
+    
+    <form class="antigon-form" onsubmit="handleSubmit(event)">
+      <div class="antigon-form-group">
+        <label class="antigon-form-label">NOM :</label>
+        <input type="text" class="antigon-form-input" required>
+      </div>
+      
+      <div class="antigon-form-group">
+        <label class="antigon-form-label">PRÉNOM :</label>
+        <input type="text" class="antigon-form-input" required>
+      </div>
+      
+      <div class="antigon-form-group">
+        <label class="antigon-form-label">TEL :</label>
+        <input type="tel" class="antigon-form-input" required>
+      </div>
+      
+      <div class="antigon-form-group">
+        <label class="antigon-form-label">EMAIL :</label>
+        <input type="email" class="antigon-form-input" required>
+      </div>
+      
+      <div class="antigon-form-group">
+        <label class="antigon-form-label">REQUÊTE :</label>
+        <textarea class="antigon-form-textarea" required></textarea>
+      </div>
+      
+      <button type="submit" class="antigon-form-submit">ENVOYER</button>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="antigon-section">
+  <div class="antigon-container" style="text-align: center;">
+    <h2 class="antigon-section-title">Contact</h2>
+    <p class="antigon-section-text">
+      Pour toute demande, veuillez utiliser notre formulaire de devis.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="antigon-footer">
+  <div class="antigon-footer-content">
+    <a href="#mentions" class="antigon-footer-link">Mentions légales</a>
+    <a href="#politique" class="antigon-footer-link">Politique de protection des données</a>
+    <a href="#charte" class="antigon-footer-link">Charte éthique</a>
+    <a href="#code" class="antigon-footer-link">Code de conduite</a>
+    <span class="antigon-footer-text">ANTIGON 2025</span>
+  </div>
+</footer>
+
+<script>
+  // Accordion functionality
+  document.querySelectorAll('.antigon-accordion-item').forEach(item => {
+    const question = item.querySelector('.antigon-accordion-question');
+    
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      
+      // Close all other accordions
+      document.querySelectorAll('.antigon-accordion-item').forEach(otherItem => {
+        otherItem.classList.remove('active');
+      });
+      
+      // Toggle current accordion
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    });
+  });
+
+  // Form submission handler
+  function handleSubmit(event) {
+    event.preventDefault();
+    alert('Merci pour votre demande ! Nous vous contacterons bientôt.');
+    event.target.reset();
+  }
+</script>
+
+</body>
+</html>
